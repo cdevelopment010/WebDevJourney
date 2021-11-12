@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sites | Timer</title>
+
+
+
+    <!-- custom CSS -->
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <main>
+        <section>
+            <h2>Egg Timer</h2>
+            <h3>Select time (minutes):</h3>
+    
+            <div>
+                <select name="time" id="time">
+                    <option value="5">5 minutes</option>
+                    <option value="10">10 minutes</option>
+                    <option value="15">15 minutes</option>
+                    <option value="20">20 minutes</option>
+                    <option value="25">25 minutes</option>
+                </select>
+        
+                <button onclick="val()">Start</button>
+                <button onclick="stopCountDown()">Stop</button>
+            </div>
+            
+    
+            <h1 id="timerCountDown">Your timer: </h1>
+
+        </section>
+    
+        <section class="section-2">
+            <h2>Count down using typed numbers</h2>
+            <p>
+                Included an if statement to check for 0 minutes and seconds.
+            </p>
+            <form>
+                <div class="form-item">
+                    <label for="minuntes">Enter number of minutes</label>
+                    <input type="number" name="minutes" id="minutes">
+                </div>
+                <div class="form-item">
+                    <label for="seconds">End number of seconds</label>
+                    <input type="number" name="seconds" id="seconds">
+                </div>
+            </form>
+
+            
+            <button onclick="minuteSecondsTimer()">Start</button>
+    
+            <p id="timeRemaining2"></p>
+        </section>
+    
+        <section>
+            <h2>Interval Timer</h2>
+            <p>
+                Not working. Can't seem to get the setInterval working with a for loop. 
+            </p>
+            <p>Select number of reps, work time and rest time.</p>
+
+            <form>
+                <div class="form-item">
+                    <label for="reps">Enter number of reps:</label>
+                    <input type="number" name="reps" id="reps">
+                </div>
+                <div class="form-item">
+                    <label for="workMins">Enter number of work minutes</label>
+                    <input type="number" name="workMins" id="workMins">
+                </div>
+                <div class="form-item">
+                    <label for="workSecs">End number of work seconds</label>
+                    <input type="number" name="workSecs" id="workSecs">
+                </div>
+                
+                <div class="form-item">
+                    <label for="workMins">Enter number of rest minutes</label>
+                    <input type="number" name="restMins" id="restMins">
+                </div>
+                <div class="form-item">
+                    <label for="workSecs">End number of rest seconds</label>
+                    <input type="number" name="restSecs" id="restSecs">
+                </div>
+            </form>
+
+            <button onclick="interval()">Let's Do This!!!!</button>
+            <p id="repsLeft"></p>
+            <p id="countDown"></p>
+            <p id="workRest"></p>
+
+
+        </section>
+    
+        
+    
+    
+        <audio src="./Assets/beep-01a.mp3" id="beep"></audio>
+    
+
+    </main>
+    
+    <script src="./index.js"></script>
+</body>
+</html>

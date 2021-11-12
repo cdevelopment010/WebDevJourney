@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background: radial-gradient(circle at top right, 
+        rgb(255, 23,58) 0%,rgb(255, 23,58) 45%, 
+        rgb(255, 48, 77) 45%,rgb(255, 48, 77) 50%,
+        rgb(255, 63, 87) 50%,rgb(255, 63, 87) 60%,
+        rgb(255, 76, 102) 60%,rgb(255, 76, 102) 85%,
+        rgb(255, 88, 105) 85%,rgb(255, 88, 105) 90%,
+        rgb(255, 99, 120) 90%,rgb(255, 99, 120) 100%); 
+
+
+    /* background: radial-gradient(circle at center, white 0%,  rgb(233, 233, 233) 5%, rgb(233, 233, 233) 10%, rgb(229, 190, 190) 20%, transparent 20%) rgb(70, 69, 69);
+    background-size: 50px 50px; */
+    
+
+}

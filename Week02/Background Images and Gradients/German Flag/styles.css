@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    /* German Flag */
+    background:   
+    linear-gradient(to bottom, transparent 66%, #ffcc00 66%), 
+    linear-gradient(to bottom, transparent  33%, red 33%),
+    linear-gradient(to bottom, black 33%, transparent 33%);
+    
+}

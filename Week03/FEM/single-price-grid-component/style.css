@@ -1,0 +1,169 @@
+/* colors */
+
+:root {
+    --cyan: hsl(179,62%,43%); 
+    --bright-yellow: hsl(71,73%,54%);
+    --light-gray: hsl(204,43%,93%); 
+    --grayish-blue: hsl(218,22%,67%); 
+    --cyan-85: hsla(179,62%,43%,0.85); 
+}
+
+/* general styling */
+
+* {
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box; 
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    height: 100%; 
+    width: 100%; 
+    background-color: var(--light-gray);
+    font-family: 'Karla', sans-serif;
+    position: relative; 
+    top: 0;
+}
+
+
+main {
+    width: 90vw;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 10px 25px 5px rgba(0,0,0,.25);
+    margin: 2rem auto 2rem auto;
+}
+
+section {
+    padding: 2rem 1rem 1rem 2rem;
+    height: 100%;
+}
+
+h1, h3 {
+    margin-bottom: 1rem;
+}
+
+
+
+li {
+    list-style: none;
+}
+
+/* Join section */
+.join {
+    background-color: white; 
+}
+
+.join h1 {
+    color: var(--cyan);
+    font-weight: 700;
+}
+
+.join h3 {
+    color: var(--bright-yellow);
+
+}
+
+.join p {
+    color: var(--grayish-blue);
+    line-height: 150%;
+    opacity: 80%;
+    width: 100%;
+}
+
+
+/* Subscription section */
+
+.subscription {
+    background-color: var(--cyan); 
+    color: white;
+}
+
+.callout {
+    font-size: 2rem;
+    display: flex; 
+    align-items: center;
+}
+
+.callout span {
+    font-size: 1rem;
+    margin-left: 1rem;
+    color: var(--light-gray);
+    opacity: 50%;
+}
+
+.subscription p {
+    color: var(--light-gray);
+}
+
+.subscription button {
+    width: 100%;
+    background-color: var(--bright-yellow); 
+    color: white; 
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 1rem;
+    font-weight: 700;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,.25);
+    margin: 1.5rem auto 1.5rem auto;
+
+}
+
+/* why us section */
+
+.why-us {
+    background-color: var(--cyan-85);
+    color: white;
+}
+
+
+.why-us li {
+    color: var(--light-gray);
+    padding-top: 0.5rem;
+}
+
+
+/* media queries */
+
+@media screen and (min-width: 90em) {
+    main {
+        width: 50%;
+        height: 60%; 
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas: "join join"
+            "subscription why-us"
+    }
+
+    section {
+        height: auto;
+        padding: 2rem 3rem;
+    }
+
+    .join {
+        grid-area: join;
+    }
+
+    .subscription {
+        grid-area: subscription;
+    }
+
+    .subscription button { 
+        width: 90%;
+        margin-top: 3rem;
+    }
+
+    .why-us {
+        grid-area: why-us;
+    }
+
+    .subscription button {
+        margin-top: 2rem;
+    }
+
+}

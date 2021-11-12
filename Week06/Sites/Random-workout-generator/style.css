@@ -1,0 +1,111 @@
+/* coolors link
+
+https://coolors.co/e63946-f1faee-a8dadc-457b9d-1d3557
+*/
+
+:root {
+    --primary: #e63946; 
+    --secondary: #1d3557;
+    --tertiary: #f1faee; 
+    --quaternary: #a8dadc;
+    --quinary: #457b9d;
+}
+
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    width: 90%; 
+    margin: 1.5rem auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+section {
+    margin-bottom: 1rem;
+}
+
+button {
+    padding: 0.5rem;   
+    border: none; 
+    background: var(--secondary);
+    color: var(--tertiary);
+    width: 50%; 
+    margin: 0 auto;
+    font-family: inherit;
+}
+
+button:hover { 
+    background-color: var(--primary); 
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+   border-collapse: collapse;
+}
+
+td {
+    border: 1px solid var(--secondary);
+    padding: 0.5rem;
+    word-wrap: break-word;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    justify-content: center;
+    align-items: stretch;
+
+}
+
+.containerHiit {
+    grid-template-columns: repeat(3,1fr);
+
+
+}
+
+.fw-bold {
+    font-weight: bold;
+    background-color: var(--secondary);
+    color: var(--tertiary);
+}
+
+.container > div, .containerHiit > div {
+    border: 1px solid var(--secondary);
+    padding: 0.5rem;
+}
+
+
+form { 
+    display: grid; 
+}
+ 
+.form-item {
+    display: grid;    
+    margin-bottom: 1rem;
+} 
+
+
+.done {
+    background: var(--primary); 
+}
+
+.exerciseType { 
+    display: grid; 
+    gap: 5px;
+}

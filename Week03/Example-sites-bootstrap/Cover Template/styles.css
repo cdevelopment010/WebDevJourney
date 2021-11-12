@@ -1,0 +1,22 @@
+.nav-link {
+    border-bottom: 1px solid transparent;
+    border-width: 5px;
+}
+
+.nav-link:hover, 
+.nav-link:active,
+.nav-link:focus {
+    border-color: inherit;
+}
+
+@media screen and (min-width: 992px) {
+    .cover-container {
+        width: 75%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .cover-container {
+        width: 50%;
+    }
+}

@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+
+    background-color: #738290 ;
+}
+
+main {
+    display: grid;
+    height: 90vh;
+    width: 90vw;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    justify-content: center;
+    align-content: stretch;
+    margin: 25px auto;
+    gap: 25px 25PX;
+    grid-template-areas:
+        "main main small main2 main2"
+        "main main small2 main2 main2"
+        "small3 medium medium small4 small5"
+}
+
+.img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    box-shadow: 0 5px 5px 5px rgba(0,0,0,.5);
+}
+
+.img:hover {
+    box-shadow: 0 5px 5px 5px rgba(255,255,255,.5);
+}
+
+.img1 {
+    background-image: url("./img/pexels-guillaume-meurice-1591447.jpg");
+    grid-area: main;
+}
+
+.img2 {
+    background-image: url("./img/pexels-kaique-rocha-775201.jpg");
+    grid-area: small;
+}
+
+.img3 {
+    background-image: url("./img/pexels-pixabay-531321.jpg");
+    grid-area: main2;
+}
+
+.img4 {
+    background-image: url("./img/pexels-simon-berger-3408552.jpg");
+    grid-area: small2;
+}
+
+.img5 {
+    background-image: url("./img/pexels-travis-blessing-1363876.jpg");
+    grid-area: small3;
+}
+
+.img6 {
+    background-image: url("./img/pexels-kaique-rocha-775201.jpg");
+    grid-area: medium;
+}
+
+.img7 {
+    background-image: url("./img/pexels-pixabay-531321.jpg");
+    grid-area: small4;
+}
+
+.img8 {
+    background-image: url("./img/pexels-guillaume-meurice-1591447.jpg");
+    grid-area: small5;
+}

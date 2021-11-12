@@ -1,0 +1,275 @@
+/* set up variables */
+
+:root {
+    --darkGrayBlue: hsl(217, 19%, 35%); 
+    --darkBlue: hsl(214, 17%, 51%); 
+    --grayBlue: hsl(212, 23%, 69%);
+    --lightGrayBlue: hsl(210, 46%, 95%);
+
+    --ff: 'Manrope', sans-serif;
+    --fs: 13px;
+
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+
+}
+
+body {
+    font-family: var(--ff); 
+    font-size: var(--fs); 
+    background-color: var(--lightGrayBlue); 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    height: 100vh;
+}
+
+main {
+    width: 90%; 
+    height: 80%;
+    background-color: white; 
+    display: grid; 
+    grid-template-rows:  40fr 45fr 15fr; 
+    grid-template-areas: "image"
+        "main"
+        "share"
+    ;
+    border-radius: 10px;
+    overflow: hidden; 
+}
+
+h1, h2 {
+    color: var(--darkGrayBlue); 
+    font-weight: 700;
+}
+
+p {
+    color: var(--darkBlue); 
+    font-weight: 500;
+}
+
+section { 
+    padding: 2rem; 
+}
+
+
+ul { 
+    display: flex;
+    justify-content: space-evenly;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* Image */
+.main-img {
+    background: url('./images/drawers.jpg'); 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    grid-area: image;
+}
+
+
+/* Text area */
+.text-area {
+    
+    grid-area: main;
+
+}
+
+.text-area p { 
+    margin-top: 1rem;
+}
+
+
+/* Avatar & share section */
+
+.avatar-share { 
+    grid-area: share;
+    display: grid; 
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas: "avatar name share";
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.avatar-share-active { 
+    position: relative;
+    background-color: var(--darkGrayBlue); 
+}
+
+.profile {
+    display: inline-block;
+    background: url('./images/avatar-michelle.jpg'); 
+    height: 40px; 
+    width: 40px; 
+    background-position: center; 
+    background-size: contain;
+    border-radius: 50%; 
+    grid-area: avatar;
+}
+
+.name {
+    grid-area: name;
+}
+
+/* icon */
+
+.share-icon { 
+    
+    background-color: var(--lightGrayBlue); 
+    height: 40px; 
+    width: 40px; 
+    border-radius: 50%; 
+    color: var(--darkBlue);
+    position: relative;
+    grid-area: share;
+
+}
+
+.share-icon i {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%,-50%); 
+
+} 
+
+.share-icon-clicked { 
+    background-color: var(--darkBlue);
+    color: white;
+}
+
+/* Share and socials */
+.share {
+    display: grid;
+    grid-template-columns: 1fr 3fr; 
+    align-items: center;
+    justify-content: center;
+    color: var(--lightGrayBlue); 
+    height: 100%; 
+    width: 50vw; 
+    position: relative;
+    left: -60vw; 
+}
+
+.share ul { 
+    height: 100%; 
+    width: 100%; 
+}
+
+.share li { 
+    height: 100%; 
+    width: 100%; 
+}
+
+.share i { 
+    position: relative;
+}
+
+.share p { 
+    color: var(--lightGrayBlue);
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    opacity: 70%;
+}
+
+/* Hidden helper class */
+.hidden {
+    display: none;
+}
+
+
+
+@media screen and (min-width: 90em) { 
+
+    main { 
+        width: 60%;
+        height: 50%;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 4fr 1fr;
+        grid-template-areas:
+            "image main"
+            "image share"
+        ;
+        justify-content: center;
+    }
+
+    section {
+        padding: 0 2rem;
+    }
+
+    .text-area {
+        align-self: center;
+    }
+
+    .avatar-share-active { 
+        position: relative;
+        background-color: white; 
+    }
+
+    .share {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        width: 250px;
+        height: auto;
+        padding: 0.5rem;
+        top:55%;
+        left: 66%;
+        background-color: var(--darkGrayBlue);
+        border-radius: 5px;
+    }
+
+    .share ul {
+        height: auto;
+        width: 50%;
+        margin-left: 10px;
+    }
+
+    .share i {
+        transform: translate(0,0);
+        top: 0; 
+        left: 0; 
+    }
+
+    .share:before, .share:after {
+        height: 25px; 
+        width: 25px; 
+        background-color: var(--darkGrayBlue);
+        content: ""; 
+        position: absolute;
+        bottom: -5px;
+        z-index: -10;
+        box-shadow: none !important;
+        outline: none;
+    }
+
+    .share:before {
+        transform: skew(0,-55deg); 
+        left: 54.5%; 
+    }
+    .share:after {
+        transform: skew(0,55deg); 
+        left: 45%; 
+    }
+
+    /* helper classes */
+
+    .hidden {
+        display: inline-block;
+    }
+
+    .hidden-lg { 
+        display: none;
+    }
+}

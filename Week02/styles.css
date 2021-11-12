@@ -1,0 +1,55 @@
+* {
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100vw;
+    height: 100vh;
+    margin: auto; 
+    background-color: #006d77;
+    color: #edf6f9;
+
+}
+
+header h1 {
+    margin: 10vh 0;
+    text-align: center;
+    border-bottom: 5px #e29578 double ;
+    font-size: 3em;
+}
+
+nav {
+    margin: 1em;
+}
+
+nav ul {
+    display: grid;
+}
+
+nav li {
+    margin: 10px;
+    list-style: none;
+    text-decoration: none;
+    
+
+}
+
+nav a {
+    color:#edf6f9;
+    text-decoration: none;
+    /* padding: 10px; */
+    font-size: 1.3rem;
+}
+
+nav a:hover {
+    background-color: #e29578; 
+}
+
+@media screen and (min-width: 48em) {
+    nav ul {
+        grid-template-columns: repeat(3,minmax(30vw,1fr));
+        text-align: center;
+    }
+}

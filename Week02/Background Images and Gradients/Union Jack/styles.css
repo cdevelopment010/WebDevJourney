@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background: linear-gradient(blue, transparent); 
+    background: linear-gradient(to bottom left, blue, transparent);
+    background: linear-gradient(red 50%, transparent 50%, transparent 75%, blue 75%); 
+
+    /* English Flag */
+    background: linear-gradient(transparent 45%, red 45%, red  55%, transparent 55%), 
+    linear-gradient(to right, transparent 45%, red 45%, red  55%, transparent 55%); 
+
+
+    /* British Flag */
+
+    background:   
+    /* Red Cross */
+    linear-gradient(to right, transparent 45%, #c8102e 45%, #c8102e  55%,transparent 55%),
+    linear-gradient(transparent  45%, #c8102e 45%, #c8102e  55%, transparent 55%),
+    /* white cross under red cross */
+    linear-gradient(to right, transparent 40%, white 40%, white 45%, transparent 45%, transparent 55%, white 55%, white 60%, transparent 60%),
+    linear-gradient(transparent 40%, white 40%, white 45%, transparent 45%, transparent 55%, white 55%, white 60%, transparent 60%),
+    /* Red Diagonal */
+    
+    linear-gradient(to top left, transparent 52%, #c8102e 52%, #c8102e  54%,transparent 54%),
+    linear-gradient(to bottom left, transparent  52%, #c8102e 52%, #c8102e  54%, transparent 54%),
+
+    /* white cross diagonal */
+    linear-gradient(to top left, transparent 0%, transparent 45%, white 45%, white 55%, transparent 55%),
+    linear-gradient(to bottom left, transparent 0%, transparent 45%, white 45%, white 55%, transparent 55%),
+    linear-gradient(#012169,#012169); 
+
+
+
+}

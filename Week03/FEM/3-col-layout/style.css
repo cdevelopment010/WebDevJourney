@@ -1,0 +1,75 @@
+
+html {
+    font-size: 15px;
+}
+body {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: hsl(0, 0%, 95%);
+}
+
+.card-title {
+    color: hsl(0, 0%, 95%);
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+.sedan {
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 10px 10px 0px 0px;
+}
+
+
+.suvs {
+    background-color: hsl(184, 100%, 22%);
+    border-radius: 0px 0px 0px 0px;
+}
+
+.luxury {
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0px 0px 10px 10px;
+}
+
+.btn {
+    background-color: white;
+}
+
+
+.sedan .btn {
+    color: hsl(31, 77%, 52%);
+    
+}
+
+.sedan .btn:hover,
+.sedan .btn:focus{
+    color: hsla(0, 0%, 100%, 0.75);
+    background-color: hsl(31, 77%, 52%);
+}
+
+.suvs .btn {
+    color: hsl(184, 100%, 22%);
+}
+.suvs .btn:hover, 
+.suvs .btn:focus{
+    color: hsla(0, 0%, 100%, 0.75);
+    background-color: hsl(184, 100%, 22%);
+}
+
+.luxury .btn {
+    color: hsl(179, 100%, 13%);
+}
+.luxury .btn:hover,
+.luxury .btn:focus{
+    color: hsla(0, 0%, 100%, 0.75);
+    background-color: hsl(179, 100%, 13%);
+
+}
+
+@media screen and (min-width: 90em) {
+    .sedan {
+        border-radius: 10px 0px 0px 10px
+    }
+
+    .luxury {
+        border-radius: 0px 10px 10px 0px;
+    }
+}

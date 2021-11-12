@@ -1,0 +1,179 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+
+nav {
+    display: none;
+}
+
+main {
+    height: 100%;
+    width: 80%;
+    margin: 1rem auto;
+    text-align: center;
+
+  
+}
+
+strong {
+    color: blue;
+}
+
+.text {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.socials {
+    width: 50%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+li {
+    list-style: none;
+    font-size: 2rem;
+}
+
+.name {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+.profile-image {
+    clip-path: circle(45% at 50% 52%);
+    height: 40vw;
+    /* border-radius: 50%; */
+    width: 40vw;
+    margin: 1rem auto;
+    background-image: url("./images/img-small.jpg");
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+}
+
+.socials li:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 48em) {
+    .profile-image {
+        height: 40vw;
+        width: 40vw;
+        
+    }
+}
+
+@media screen and (min-width: 64em) {
+
+    html {
+        font-size: 22px;
+    }
+
+    main {
+        display: grid;
+        justify-content:space-between;
+        align-items: flex-start;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+       
+    }
+
+    main section:first-child {
+        flex: 50%;
+    }
+
+    main section:last-child {
+        position: relative;
+        min-height: 100%;
+        flex: 40%;
+    }
+
+    nav {
+        display: inline;
+        align-self: baseline;
+    }
+
+    nav ul {
+        display: flex;
+        height:  3rem;
+        flex-direction: row;
+        flex-grow: 1;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 0.5rem;
+    }
+
+    nav li:hover {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .profile-image {
+        background-image: url("./images/img-med.jpg"); 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* height: 60vh; */
+        width: auto;
+        border-radius: 20px;
+        clip-path: none;
+    }
+    
+
+    .text {
+        position: absolute; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    .socials {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    
+}
+
+@media screen and (min-width: 90em) {
+    html {
+        font-size: 25px;
+    }
+
+
+    main {
+        margin: 2rem auto;
+    }
+
+    .text {
+        font-size: 2rem;
+        width: 80%;
+    }
+
+    .socials li {
+        font-size: 2.5rem;
+    }
+
+    .profile-image {
+        box-shadow: 3px 5px 10px -1px rgba(0,0,0,0.5)
+    }
+}

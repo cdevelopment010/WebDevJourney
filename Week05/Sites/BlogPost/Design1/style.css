@@ -1,0 +1,149 @@
+* {
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+/* Generic Styling */
+
+main {
+    width: 80%; 
+    margin: 1rem auto;
+    color: rgb(68, 65, 65);
+}
+
+section {
+    margin: 1rem 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.fw-bold {
+    font-weight: bold;
+}
+.container {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    justify-content: center;
+    align-items: center;
+}
+.container-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header */
+header {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    padding: 1rem 0 2rem 0;
+    border-bottom: 1px solid black;
+}
+
+.burger {
+    position: absolute;
+    top: 0; 
+    right: 0; 
+}
+
+.nav-list {
+    display: none;
+}
+
+
+
+
+/* Title Section */
+
+.title-area {
+    display: grid; 
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    grid-template-columns: 1fr 1fr; 
+
+    grid-template-areas: "title title"
+        "post-info socials"; 
+
+    gap: 1rem;
+    margin-bottom: 1rem;
+    
+}
+
+.title-area h1 {
+    grid-area: title;
+}
+
+.post-info {
+    grid-area: post-info;
+}
+
+.socials ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Contents */
+
+.content-area {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    gap: 20px;
+}
+
+.contents {
+    background: rgba(207, 199, 199, 0.6);
+    width: max(30%, 200px);
+    margin: 0 auto;  
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.contents li {
+    padding: 0.25rem;
+}
+
+.contents ol {
+    text-indent: 1rem;
+}
+
+
+
+/* Comments */
+
+.comments-area form {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.comments-area button {
+    margin-top: 1rem;
+}
+
+.comment-card {
+    border-radius: 5px; 
+    border: 1px solid black;
+    margin: 1rem 0;
+    padding: 1rem;
+    display: grid; 
+    grid-template-columns: 1fr 2fr;
+}
+
+.name {
+    font-weight: bold;
+    text-transform: capitalize;
+}

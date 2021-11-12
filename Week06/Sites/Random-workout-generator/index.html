@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sites | Random Workout Generator</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <main>
+        <h1>
+            Random Workout Generator
+        </h1>
+
+
+        <section class="exerciseType">
+            <button id="selectWeightLifting">Weight Lifting</button>
+            <button id="selectHiit">HIIT</button>
+        </section>
+
+        <section id="weightLifting">
+
+            <form>
+                <div class="form-item">
+                    <label for="numberExcersie">Number of exercises:</label>
+                    <input type="number" name="numberExercises" id="numberExercises" max="32">
+                </div>
+                <div class="form-item">
+                    <label for="workoutType">Select workout type</label>
+                    <select name="workoutType" id="workoutType">
+                        <option value="Strength">Strength</option>
+                        <option value="Hypertrophy">Hypertrophy</option>
+                        <option value="Endurance">Endurance</option>
+                    </select>
+                </div>
+                <button type="button" id="btnWeightLiftingWorkout">Create Workout</button>
+            </form>
+            
+        </section>
+
+        <section id="hiit" class="hidden">
+            <form>
+                <div class="form-item">
+                    <label for="numberExercisesHiit">Number of exercises:</label>
+                    <input type="number" name="numberExercisesHiit" id="numberExercisesHiit"  max="35">
+                </div>
+                <div class="form-item">
+                    <label for="hiitRounds">Number of rounds:</label>
+                    <input type="number" name="hiitRounds" id="hiitRounds">
+                </div>
+                <div class="form-item">
+                    <label for="hiitWork">Working time (seconds):</label>
+                    <input type="number" name="hiitWork" id="hiitWork" placeholder="30">
+                </div>
+                <div class="form-item">
+                    <label for="hiitRest">Rest time (seconds):</label>
+                    <input type="number" name="hiitRest" id="hiitRest" placeholder="30">
+                </div>
+                <button type="button" id="btnHiitWorkout">Create Workout</button>
+            </form>
+        </section>
+
+        
+
+    
+
+        <section id="exerciseTable">
+
+        
+
+        </section>
+    </main>
+
+
+    <script src="./index.js"></script>
+    
+</body>
+</html>

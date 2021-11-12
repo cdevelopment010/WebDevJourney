@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    background: #8db600;
+}
+
+h1 {
+    font-size: 5rem;
+    margin: 2rem auto;
+    color: transparent;
+    background-image: url('./images/Cherry\ Blossom.jpg'); 
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+
+@media screen and (min-width: 48rem) {
+    html {
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 90rem) {
+    html {
+        font-size: 35px;
+    }
+}

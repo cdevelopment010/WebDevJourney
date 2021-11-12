@@ -1,0 +1,50 @@
+
+:root {
+    --ice-cream: plum; 
+}
+* {
+    padding: 0;
+    margin: 0; 
+    box-sizing: border-box; 
+}
+
+
+.container {
+    height: 50vw; 
+    width: 50vw; 
+    position: relative; 
+    background: rgb(30,30,30);
+    margin: 5vw auto
+}
+
+.ice-lolly {
+    background: var(--ice-cream); 
+    height: 60%; 
+    width: 40%; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%,-50%);
+    border-radius: 25% 25% 10px 10px;
+}
+
+.stick {
+    background: #BA8C63; 
+    height: 15%; 
+    width: 5%; 
+    position: absolute; 
+    top: 80%; 
+    left: 50%; 
+    transform: translateX(-50%);
+    border-radius: 0 0 10px 10px; 
+}
+
+.stick::after {
+    content: ""; 
+    position: absolute; 
+    height: 10%; 
+    width: 100%; 
+    top: 0; 
+    left: 0; 
+    background: rgba(10,10,10,0.5);
+}

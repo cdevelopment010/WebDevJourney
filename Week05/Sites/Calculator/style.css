@@ -1,0 +1,166 @@
+/* 
+
+https://coolors.co/0d1b2a-1b263b-415a77-778da9-e0e1dd
+*/
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: #e0e1dd;
+    color: #1b263b
+}
+
+h1 {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+main {
+    height: 80vh;
+    width: 80%; 
+    margin: 1rem auto; 
+    display: grid; 
+    gap: 10px; 
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 1fr;
+    align-items:stretch;
+    background-color: #1b263b;
+    padding: 1rem;
+    border-radius: 25px;
+}
+
+section:first-child {
+    align-self: flex-end;
+}
+
+p {
+    background-color: #e0e1dd;
+    min-height: 30px;
+    width: 100%; 
+    color: black;
+    text-align: right;
+    padding: 1rem;
+}
+
+p:first-child {
+    border-radius: 10px 10px 0 0;
+}
+
+p:last-child {
+    border-radius: 0 0 10px 10px;
+}
+
+.buttons {
+    display: grid; 
+    gap: 5px; 
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: "openBracket closeBracket power mod"
+        "divide multiply subtract addition"
+        "seven eight nine clear"
+        "four five six equals"
+        "one two three equals"
+        "zero zero zero equals"
+    ;
+}
+
+button {
+    border-radius: 10px;
+    border: none;
+    background-color: #778da9;
+    color: #e0e1dd;
+    font-size: 2rem;
+}
+
+.equals {
+    grid-area: equals; 
+}
+
+.clear {
+    grid-area: clear; 
+}
+
+.zero {
+    grid-area: zero; 
+}
+
+.one {
+    grid-area: one; 
+}
+
+.two {
+    grid-area: two; 
+}
+
+.three {
+    grid-area: three; 
+}
+
+.four {
+    grid-area: four; 
+}
+
+.five {
+    grid-area: five; 
+}
+
+.six {
+    grid-area: six; 
+}
+
+.seven {
+    grid-area: seven; 
+}
+
+.eight {
+    grid-area: eight; 
+}
+
+.nine {
+    grid-area: nine; 
+}
+
+.divide {
+    grid-area: divide; 
+}
+
+.multiply {
+    grid-area: multiply; 
+}
+
+.subtract {
+    grid-area: subtract; 
+}
+
+.addition {
+    grid-area: addition; 
+}
+
+.openBracket {
+    grid-area: openBracket; 
+}
+
+.closeBracket {
+    grid-area: closeBracket; 
+}
+
+.power {
+    grid-area: power; 
+}
+
+.modulus {
+    grid-area: mod; 
+}
+
+
+
+/* Media queries */
+
+@media screen and (min-width: 64em) {
+    main {
+        width: 40%;
+    }
+}

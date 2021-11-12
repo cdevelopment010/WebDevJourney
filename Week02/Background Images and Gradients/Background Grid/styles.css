@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container-grid {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25fr 30fr 40fr 15fr; 
+    grid-template-rows: 2fr 6fr 3fr;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+    background: black;
+    
+    
+}
+
+.grid-img {
+    background-image: url("./images/City-night.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; 
+    /* Need fixed otherwise the image doesn't position right.  */
+    
+    
+}

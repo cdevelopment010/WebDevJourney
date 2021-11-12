@@ -1,0 +1,305 @@
+* {
+    box-sizing: border-box; 
+    padding: 0; 
+    margin: 0; 
+}
+
+body {
+    width: 80%; 
+    margin: 1rem auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 5rem;
+    padding-bottom: 50px
+}
+
+
+section {
+    margin-bottom: 50px;
+    display: flex;
+}
+
+.animation-zone {
+    flex: 33.3%;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+
+}
+
+
+.box {
+    height: 150px; 
+    width: 150px;
+    background-color: #483d3f; 
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.box1 {
+    background-color: #C76D7E;
+}
+
+.box2 {
+    background-color: #058ED9;
+}
+
+
+/* Scale */
+
+/* start small and increase size on hover */
+
+.scale {
+    transform: scale(0.8);
+    transition: transform 0.5s ease-in-out ;
+}
+
+.scale:hover {
+    transform: scale(1);
+}
+
+/* Rotate */
+
+.rotate {
+    transform: rotate(0deg); 
+    transition: transform 1s ease-in-out;
+}
+
+.rotate:hover {
+    transform: rotate(360deg);
+}
+
+/* Translate */
+
+.translate {
+    transform: translate(0, 0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.translate:hover{
+    transform: translate(100px, 50px);
+
+}
+
+/* Translate X */
+
+.translate-x {
+    transform: translateX(0); 
+    transition: transform 0.2s ease;
+}
+
+.translate-x:hover {
+    transform: translateX(25px);
+}
+
+/* Translate Y */
+
+.translate-y {
+    transform: translateY(0); 
+    transition: transform 0.2s ease;
+}
+
+.translate-y:hover {
+    transform: translateY(25px);
+}
+
+/* Translate Z */
+
+.translate-z {
+    transform:  translateZ(0);
+    transition: transform 0.2s ease;
+}
+
+.translate-z:hover {
+    transform: perspective(500px)  translateZ(100px);
+}
+
+/* Background */
+
+.bg {
+    z-index: 1;
+    border: none;
+}
+
+.bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #C76D7E;
+    z-index: -1;
+    transform: scaleY(0); 
+    transform-origin: top;
+    transition: transform 0.2s ease-in-out;
+}
+
+.bg:hover::before {
+    transform: scaleY(1);
+}
+
+
+
+/* box-shadow */
+
+.box-shadow {
+    transition: box-shadow 0.2s ease;
+}
+
+.box-shadow:hover {
+    box-shadow: 0 5px 5px 5px;
+}
+
+
+/* border-radius */
+
+.border-radius {
+    transition: border-radius 1s ease;
+}
+
+.border-radius:hover {
+    border-radius: 50%;
+}
+
+
+/* Slide in */
+
+
+.slide-in-header .slide-in{
+    transform: translate(100%,0);
+    opacity: 0;
+    transition: transform  0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.slide-in-header:hover .box{
+    transform: translate(0,0); 
+    opacity: 1;
+}
+
+
+
+/* img text */
+
+.img-text {
+    position: relative;
+    
+}
+
+.img-overlay {
+    height: 100%;
+    width: 100%;
+    background: url('./images/clouds.jpg');
+    background-size: cover;
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.img-text-text {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.img-text:hover .img-text-text {
+    opacity: 1;
+}
+
+.img-text:hover .img-overlay {
+    transform: scale(1.2);
+}
+
+
+
+/* Keyframes */
+
+
+/* wiggle */
+
+.wiggle {
+
+    animation: wiggle 2s forwards infinite;
+
+}
+
+@keyframes wiggle {
+
+    80% {
+        transform: rotate(0deg);
+    }
+    85% {
+        transform: rotate(10deg);
+    }
+    95% { 
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg)
+    }
+
+}
+
+
+/* Change colours */
+
+
+.color-change {
+    animation: color-change 4s forwards infinite;
+}
+
+@keyframes color-change {
+    0% {
+        background-color: #c4e7d4;
+    }
+
+    25% {
+        background-color: #C4DACF;
+    }
+    50% {
+        background-color: #B9C0DA;
+    }
+    75% {
+        background-color: #998da0;
+    }
+    100% {
+        background-color: #63585e;
+    }
+}
+
+/* movement animation */
+
+.movement {
+    animation: movement 5s forwards infinite; 
+}
+
+@keyframes movement {
+    0% {
+        transform: translate(0,0);
+    }
+    20% {
+        transform: translate(50px,-50px);
+    }
+    40% {
+        transform: translate(50px,50px);
+    }
+    65% {
+        transform: translate(-50px,50px);
+    }
+    80% {
+        transform: translate(-50px,-50px);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}

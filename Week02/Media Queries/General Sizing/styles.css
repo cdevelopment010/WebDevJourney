@@ -1,0 +1,76 @@
+* {
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box;
+}
+
+main {
+    display: flex; 
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: palegoldenrod;
+}
+
+
+.tablet, .small-screen, .large-screen {
+    display: none;
+}
+
+
+/* Media Queries */
+
+
+/* Tablet */
+
+@media screen and (min-width: 48em) {
+    .mobile {
+        display: none; 
+    }
+
+    .tablet {
+        display: block;
+    }
+
+    main {
+        background-color: seagreen;
+        font-size: 2rem;
+    }
+}
+
+
+/* small screen */
+@media screen and (min-width: 64em) {
+
+    .tablet {
+        display: none;
+    }
+
+    .small-screen {
+        display: flex;
+    }
+
+    main {
+        background-color: steelblue;
+        font-size: 3rem;
+    }
+
+}
+
+
+/* large-screen */
+
+@media screen and (min-width: 90em) {
+    .small-screen {
+        display: none;
+    }
+
+    .large-screen {
+        display: flex;
+    }
+
+    main {
+        background-color:hotpink;
+        font-size: 5rem;
+    }
+}

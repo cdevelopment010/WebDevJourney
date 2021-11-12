@@ -1,0 +1,43 @@
+
+/* Generic Styling */
+
+* {
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    width: 90%; 
+    margin: 0 auto; 
+}
+
+li {
+    list-style: none;
+    margin-top: 0.5rem;
+}
+
+a {
+    color: green;
+}
+
+a:visited {
+    color: darkgreen;
+}
+
+header {
+    text-align: center;
+    padding: 1rem;
+}
+
+header p {
+    margin: 1rem 0;
+}
+
+section { 
+    padding: 1rem; 
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 1rem 0; 
+    box-shadow: 0 5px 10px -5px ;
+}

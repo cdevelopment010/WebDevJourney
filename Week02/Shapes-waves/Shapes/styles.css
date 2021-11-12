@@ -1,0 +1,230 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+
+body {
+    width: 100%; 
+}
+
+
+main {
+    width: 80%; 
+    margin: 0 auto;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+section:nth-child(even) {
+    background: green;
+}
+section:nth-child(odd) {
+    background: red;
+}
+
+
+.shape {
+    height: 25vw;
+    width: 25vw;
+    background: #124de1;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+
+}
+
+.shape p {
+    z-index: 10;
+}
+
+
+/* Circles */
+
+
+/* circle-1 using border radius */
+
+.circle-1 {
+    border-radius: 50%;
+}
+
+/* circle-2 using clip-path */
+
+.circle-2 {
+    clip-path: circle(50%);
+}
+
+
+/* Squares */
+
+/* Don't actually have to do anything but will resize using borders and clip-path */
+
+.square-1 {
+    transform: scale(80%);
+}
+
+.square-2 {
+    clip-path: polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%);
+}
+
+
+/* Triangle */
+
+
+
+.triangle-1 {
+    background: none;
+    border-left: 12.5vw solid transparent;
+    border-right: 12.5vw solid transparent;
+    border-bottom: 25vw solid #124de1;
+    border-top: 0 solid transparent;
+}
+
+.triangle-2 {
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+
+/* Cross */
+
+.cross-1 {
+    position: relative; 
+    background: none;
+}
+
+.cross-1 p {
+    z-index: 10;
+}
+
+.cross-1::before, .cross-1::after {
+    position: absolute;
+    content: ""; 
+    height: 50%;
+    width: 100%;
+    background: #124de1;
+
+}
+
+.cross-1::after {
+    transform: rotate(90deg);
+}
+
+.cross-2 {
+    clip-path: polygon(25% 0, 75% 0, 75% 25%, 100% 25%, 100% 75%, 75% 75%, 75% 100%,
+                        25% 100%, 25% 75%, 0 75%, 0 25%, 25% 25%
+    );
+}
+
+
+
+/* Arrows */
+
+.arrow-1 {
+    position: relative; 
+    background: none;
+}
+
+.arrow-1::before{
+    position: absolute; 
+    content: "";
+    height: 30%;
+    width: 80%;
+    background: #124de1;
+    left: 0;  
+}
+
+.arrow-1::after {
+    position: absolute; 
+    content: "";
+    height: 0;
+    width: 0;
+    right: 0;
+    border-top: calc(25vw - 25vw * 0.6) solid transparent;
+    border-left: calc(25vw - 25vw * 0.8) solid #124de1;
+    border-bottom: calc(25vw - 25vw * 0.6) solid transparent;
+}
+
+
+.arrow-2 {
+    clip-path: polygon(0 35%, 80% 35%, 80% 10%, 100% 50%, 80% 90%, 80% 65%, 0 65%);
+}
+
+
+/* Star */
+
+
+.star-1 {
+    position: relative; 
+    background: none;
+}
+
+.star-1::before{
+    position: absolute; 
+    content: "";
+    height: 0;
+    width: 0;
+    left: 50%;
+    transform: translate(-50%,15%);
+    
+    border-left: 15vw solid transparent;
+    border-top: 17.5vw solid #124de1;
+    border-right: 15vw solid transparent;
+
+;}
+
+.star-1::after {
+    position: absolute; 
+    content: "";
+    height: 0;
+    width: 0;
+    left: 50%;
+    transform: translate(-50%,-15%);
+    border-left: 15vw solid transparent;
+    border-bottom: 17.5vw solid #124de1;
+    border-right: 15vw solid transparent;
+}
+
+.star-2 {
+    clip-path: polygon(50% 0%, 65% 25%, 100% 25%, 75% 50% ,100% 75%, 65% 75%, 50% 100%, 35% 75%, 0 75%, 25% 50%, 0 25%, 35% 25%); 
+}
+
+
+
+/* Hero Slant */
+
+
+.hero-slant {
+    margin-top: 30px;
+    height: 100vh; 
+    width: 100%; 
+}
+
+.top {
+    background: blue;
+    height: 50vh;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20vh), 0 100%);
+    margin-bottom: -20vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: white; 
+    font-family: Arial, Helvetica, sans-serif; 
+
+}
+
+.bottom {
+    height: 70vh;
+    width: 100%; 
+    background: #F256d3;
+}
