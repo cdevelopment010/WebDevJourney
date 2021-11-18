@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/main.css">
+
+
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="./images/logo.svg" alt="SPLITTER logo">
+  </header>
+
+
+  <main>
+
+    <div class="container">
+      <div class="form-item bill">
+        <label for="bill">Bill</label>
+        <div class="form-item-group">
+          <img src="./images/icon-dollar.svg" alt="">
+          <input type="number" name="bill" id="bill">
+        </div>
+      </div>
+  
+      <form action="">
+        <select name="tip" id="tip" class="customSelect">
+          <option value="5">5%</option>
+          <option value="10">10%</option>
+          <option value="15">15%</option>
+          <option value="25">25%</option>
+          <option value="50">50%</option>
+          <option value="cust">customTip</option>
+  
+  
+        </select>
+      </form>
+      
+      <div class="select" id="selectTip">
+        <label for="selectTip">Select Tip %</label>
+        <div class="select__item" onclick="active(this)">5%</div>
+        <div class="select__item" onclick="active(this)">10%</div>
+        <div class="select__item" onclick="active(this)">15%</div>
+        <div class="select__item" onclick="active(this)">25%</div>
+        <div class="select__item" onclick="active(this)">50%</div>
+        <input class="select__item" type="number" name="customTip" id="customTip" placeholder="Custom">
+      </div>
+  
+  
+      <div class="form-item people">
+        <label for="people">Number of People</label>
+        <!-- <span>Can't be zero</span> -->
+        <div class="form-item-group">
+          <img src="./images/icon-person.svg" alt="">
+          <input type="number" name="people" id="people">
+        </div>
+      </div>
+  
+  
+  
+      <div class="calc">
+        <div class="label">
+          Tip Amount
+          <div>/ person</div>
+        </div>
+  
+        <div class="result" id="tipResult">$0.00</div>
+  
+        <div class="label">
+          Total
+          <div>/ person</div>
+        </div>
+  
+        
+        <div class="result" id="totalResult">$0.00</div>
+  
+        <button id="resetBtn">Reset</button>
+    </div>
+
+    </div>
+  </main>
+
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+</html>

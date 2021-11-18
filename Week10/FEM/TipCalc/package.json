@@ -1,0 +1,17 @@
+{
+  "name": "tipcalc",
+  "version": "1.0.0",
+  "description": "![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "sass": "node-sass --watch ./scss -o ./css --output-style-compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^6.0.1",
+    "normalize-scss": "^7.0.1"
+  }
+}
