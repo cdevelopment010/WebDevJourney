@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sites | GymPage</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <a href="./index.html">DD</a> 
+        </div>
+        <div class="burgerBar" id="burgerBar">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+        </div>
+        <nav id="nav" class="hidden">
+            <ul>
+                <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Sign Up</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">My Account</a></li>
+                <li class="nav-item"><a href="./classes.html" class="nav-link">Classes</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Gym</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Swimming</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Personal Trainers</a></li>
+                <li class="nav-item"><a href="./timetable.html" class="nav-link">Opening times</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+
+    <main>
+
+        <h1>Classes</h1>
+
+        <div class="item-group">
+            <label for="classes">Select Activity: </label>
+            <select name="classes" id="classes">
+                <option value="Badminton">Badminton</option>
+                <option value="Squash">Squash</option>
+                <option value="Spinning">Spinning</option>
+                <option value="YogaBeginners">Beginner Yoga Classes</option>
+                <option value="YogaIntermediate">Intermediate Yoga Classes</option>
+                <option value="YogaExpert">Expert Yoga Classes (yogi God mode)</option>
+                <option value="YogaHot">Hot Yoga</option>
+                <option value="fiveAside">Indoor 5-aside football</option>
+                <option value="Basketball">Basketball</option>
+            </select>
+        </div>
+
+
+        <div class="item-group">
+            <label for="date">Select Date:</label>
+            <input type="date" name="date" id="date">
+        </div>
+
+        <div class="item-group">
+            <button id="classBtn">Check Activity</button>
+        </div>
+    </main>
+
+
+    <footer>
+
+    </footer>
+
+    <script src="./index.js"></script>
+    <script src="classes.js"></script>
+</body>
+</html>
