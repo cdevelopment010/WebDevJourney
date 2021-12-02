@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Battle | #2 Carrom</title>
+
+    <style>
+        * {
+            margin: 0; 
+            padding: 0;
+            box-sizing: border-box;
+        }
+            body {
+                display: flex; 
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            .container {
+                background: #62374e;
+                height: 300px; 
+                width: 400px;
+                position: relative;
+            }
+            .sq {
+                width: 50px;
+                height: 50px;
+                background: #fdc57b;
+            }
+            .sq1 {
+                position: absolute; 
+                top: 50px; 
+                left: 50px; 
+            }
+            .sq2 {
+                position: absolute; 
+                bottom: 50px; 
+                left: 50px; 
+            }
+            .sq3 {
+                position: absolute; 
+                top: 50px; 
+                right: 50px; 
+            }
+            .sq4 {
+                position: absolute; 
+                bottom: 50px; 
+                right: 50px; 
+            }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="sq sq1"></div>
+    <div class="sq sq2"></div>
+    <div class="sq sq3"></div>
+    <div class="sq sq4"></div>
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Battle | #8 Forking Crazy</title>
+
+    <style>
+        * {
+            margin: 0; 
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .container {
+            background:#6592CF;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            height: 300px; 
+            width: 400px;
+            position: relative;
+        }
+        #fork{
+            height: 190px;
+            width: 140px;
+            background: #060F55; 
+            border-radius: 0 0 100px 100px;
+            position: relative;
+            top: 5px;
+        }
+        .tip{
+            background: #060F55;
+            height: 30px; 
+            width: 20px; 
+            position: absolute;
+            border-radius: 10px 10px 0 0 ;
+            left: 0px;
+            top: -10px;
+        }
+        .t2 {
+            left: 40px;
+        }
+        .t3 {
+            left: 80px;
+        }
+        .t4 {
+            left: 120px;
+        }
+        .gap {
+            height: 100px; 
+            width: 20px; 
+            background: #6592CF; 
+            position: absolute; 
+            left: 20px;
+            border-radius: 0 0 10px 10px;
+        }
+        .g2 {
+            left: 60px;
+        }
+        .g3 {
+            left: 100px;
+        }
+        #fork:after {
+            position: absolute;
+            content: "";
+            top: 100%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            height: 100px; 
+            width: 20px; 
+            background: #060F55; 
+        }      
+    </style>
+</head>
+<body>
+<p>Stuggled to get the body just right, and couldn't get the tips of the fork working without adding more elements.</p>
+<div class="container">
+    <div id="fork">
+        <div class="tip t1"></div>
+        <div class="tip t2"></div>
+        <div class="tip t3"></div>
+        <div class="tip t4"></div>
+        <div class="gap g1"></div>
+        <div class="gap g2"></div>
+        <div class="gap g3"></div>
+      </div>
+</div>
+    
+</body>
+</html>
