@@ -64,3 +64,17 @@ footer > .socials {
 .socials a:hover {
     color: white;
 }
+
+@media screen and (min-width: 48em) {
+    section ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    section ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
