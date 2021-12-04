@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Battle | #10 Cloaked Spirits</title>
+
+    <style>
+        * {
+            margin: 0; 
+            padding: 0;
+        }
+        body {
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .container {
+            background: #62306D;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            height: 300px; 
+            width: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        .line {width: 100px;height: 600px;background: #F7EC7D;position: absolute;top: 67.5%;}  
+        .l1 {left: 50px} 
+        .l3 {left: 250px} 
+        .line:after {content:"";width: 60px;height: 60px;border-radius: 50%;background: #E38F66;border: 20px solid #AA445F;position: absolute;top: -50px;}
+        .l2 {top: 32.5%;}
+        .l2:after {background: #AA445F;border: 20px solid #E38F66;}
+       
+    </style>
+</head>
+<body>
+    <p>Had to change CSS and HTML slightly for this compared to CSS battle. </p>
+<div class="container">
+    <div class="line l1"></div>
+    <div class="line l2"></div>
+    <div class="line l3"></div>
+</div>
+    
+</body>
+</html>
