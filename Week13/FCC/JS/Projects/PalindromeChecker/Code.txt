@@ -1,0 +1,25 @@
+function palindrome(str) {
+
+  let strClean = str.replace(/[^a-zA-Z0-9]+/gi, "").toLowerCase(); 
+
+
+
+  let splitStr = strClean.split("");
+  let splitStrReverse = splitStr.reverse().join("");
+
+  if (strClean != splitStrReverse ){
+    return false;
+  }
+  
+
+
+
+  return true;
+}
+
+palindrome("1 eye for of 1 eye.");
+// palindrome("eye");
+// palindrome("2A3*3a2");
+// palindrome("_eye");
+// palindrome("never odd or even");
+// palindrome("not a palindrome");

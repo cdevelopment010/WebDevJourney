@@ -1,0 +1,3 @@
+Need to update the Thousands
+Is there a better way to do the length/if statements? 
+For loop and reserves the order?

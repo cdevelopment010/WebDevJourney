@@ -1,0 +1,72 @@
+function convertToRoman(num) {
+
+  let str = ""; 
+  let digits = String(num).split("");
+  let length = digits.length
+
+  // 1000 (length = 4)
+
+  if (length == 4) {
+    
+    str += thousands(digits[0]); 
+    str += hundreds(digits[1]); 
+    str += tens(digits[2]); 
+    str += units(digits[3]); 
+  }
+
+  if (length == 3){ 
+    str += hundreds(digits[0]);
+    str += tens(digits[1]); 
+    str += units(digits[2]); 
+  }
+  if (length == 2) {
+    str += tens(digits[0]); 
+    str += units(digits[1]); 
+  }
+
+  if (length == 1) {
+    str += units(digits[0]);
+  }
+
+  console.log(str)
+  return str; 
+}
+
+convertToRoman(36);
+convertToRoman(2);
+convertToRoman(3);
+convertToRoman(29);
+convertToRoman(1000);
+
+
+function thousands(num) {
+  let char = "M"; 
+  return char.repeat(num); 
+}
+
+function rangeRomans(num, lower, mid, upper){
+  if (num <= 3) {
+    return lower.repeat(num); 
+  } else if (num <= 8) { 
+      if (num == 4 ) {
+        return lower + mid; 
+      } else {
+        return mid + lower.repeat(num-5); 
+      }
+  } else {
+    return lower + upper; 
+  }
+}
+
+
+function hundreds(num) {
+  return rangeRomans(num, "C", "D", "M");
+}
+
+function tens(num) {
+  return rangeRomans(num, "X", "L", "C");
+}
+
+function units(num) { 
+  return rangeRomans(num, "I", "V", "X"); 
+}
