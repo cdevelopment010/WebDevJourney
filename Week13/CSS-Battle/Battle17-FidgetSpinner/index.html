@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Battle | #17 Fidget Spinner</title>
+
+    <style>
+        * {
+            margin: 0; 
+            padding: 0;
+        }
+            body {
+                display: flex; 
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                height: 100vh;
+            }
+            .container {
+                background: #09042A;
+                height: 300px; 
+                width: 400px;
+                display:flex;align-items:center;justify-content:center;gap:40px;
+                z-index: -2;
+            }
+            .m{height:60px;width:60px;border-radius:50%;border:10px solid #E78481;position:relative;background:#09042A}
+            .m:first-child:before{position:absolute;content:"";width:100px;height:50px;background:#E78481;top:5px;left:20px;z-index:-1}
+            .l:after,.r:before{position:absolute;content:"";height:60px;width:60px;border-radius: 50%;background: #F5BB9C;border:10px solid #09042A}
+            .l:after{top:-63px;left:50px;}
+            .r:before{top:43px;left:-70px}
+            
+    </style>
+</head>
+<body>
+
+    <p>Quite high character count - will have a think if there is a better way</p>
+<div class="container">
+    <div class="m l"></div>
+    <div class="m r"></div>
+</div>
+    
+</body>
+</html>

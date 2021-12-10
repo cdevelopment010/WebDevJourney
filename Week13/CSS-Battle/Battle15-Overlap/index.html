@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Battle | #15 Overlap</title>
+
+    <style>
+        * {
+            margin: 0; 
+            padding: 0;
+            box-sizing: border-box;
+        }
+            body {
+                display: flex; 
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                height: 100vh;
+            }
+            .container {
+                background: #09042A;
+                height: 300px; 
+                width: 400px;
+                position: relative;
+            }
+            div>div {position: absolute;top: 50%;transform: translateY(-50%);width: 150px;height: 150px;background: #7B3F61;border-radius: 50%;}
+            .l {left: 67px;}
+            .r {left: 167px;background: #E78481;overflow: hidden;z-index: 2;}
+            .r:before {content: "";position: absolute;height: 100%;width: 100%;background: #09042A;border-radius: 50%;left: -100px}
+            
+    </style>
+</head>
+<body>
+
+    <p>Tried to do something with mix-blend-mode but went with a pseudo element</p>
+<div class="container">
+    <div class="r"></div>
+    <div class="l"></div>
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Battle | #16 Eye Of The Tiger</title>
+
+    <style>
+        * {
+            margin: 0; 
+            padding: 0;
+            box-sizing: border-box;
+        }
+            body {
+                display: flex; 
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                height: 100vh;
+            }
+            .container {
+                background: #0B2429;
+                height: 300px; 
+                width: 400px;
+                display: grid; 
+                place-items: center;
+                z-index: -2;
+            }
+            div>div{border-radius:50%}
+            #outer{background:#998235;width:200px;height:200px;display:grid;place-items:center;position:relative}
+            #inner{height:140px;width:140px;background:#F3AC3C;border:20px solid #0B2429;position:relative}
+            #inner:before{content:"";position:absolute;width:50px;height:50px;border-radius:50%;background: #0B2429;top:50%;left:50%;transform:translate(-50%,-50%)}  
+            #outer:before,#outer:after{content:"";position:absolute;height:50%;width:50%;left:-20px;top:50%;transform:translateY(-50%) rotate(45deg);background:#998235;z-index:-1}
+            #outer:after{left:120px}
+            
+    </style>
+</head>
+<body>
+
+    <p>Quite high character count - will have a think if there is a better way</p>
+<div class="container">
+    <div id="outer"><div id="inner"></div></div>
+</div>
+    
+</body>
+</html>

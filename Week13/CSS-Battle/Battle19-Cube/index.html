@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Battle | #19 cube</title>
+
+    <style>
+            * {
+                box-sizing: border-box;
+                padding: 0; 
+                margin: 0; 
+            }
+            body {
+                display: flex; 
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                height: 100vh;
+            }
+            .container {
+                background:#0B2429;
+                height: 300px; 
+                width: 400px;
+                position: relative;
+            }
+            div>div{height: 100px;width:100px;background:#F3AC3C;transform:rotate(45deg);position:absolute;top:135.3px;left:150px}
+            div>div:before{content:"";position:absolute;height:100%;width: 50%;top:-25%;left:-50%;background:#998235;transform:skewY(45deg)} 
+            div>div:after{content:"";position:absolute;height:50%;width:100%;top:-50%;left:-25%;background:#1A4341;transform: skewX(45deg)}
+            
+    </style>
+</head>
+<body>
+<p>Only managed 99.9% on this - couldn't get it working!</p>
+<div class="container">
+    <div></div>
+</div>
+    
+</body>
+</html>
