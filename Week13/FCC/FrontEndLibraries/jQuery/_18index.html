@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap -  jQuery playground</title>
+
+    <!-- BOOTSTRAP LINK -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+
+    <!-- GOOGLE FONTS -->
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+    <!-- link to animate css -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+    <!-- Link to jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- jQuery Code -->
+    <script>
+        // Document ready prevents the code running before the HTML has rendered
+        $(document).ready(function(){
+            // change css by using .css() function. The property and values are in "" separated by a comma
+            $("#target1").css("color","red"); 
+
+            $("#target4").remove(); 
+            //move elements by using .appendTo();
+            $("#target2").appendTo("#right-well"); 
+
+            //create a copy of an element using .clone()
+            //function chaining - sticking two functions together
+            $("#target5").clone().appendTo("#left-well"); 
+
+            //target an elements parent by using .parent()
+            $("#target1").parent().css("background-color", "red");
+
+            //target the children of an element by using .children(); 
+            $("#right-well").children().css("color","orange"); 
+
+            //Select specific child elements using CSS :nth-child(n); 
+            $(".target:nth-child(2)").addClass("animate__animated animate__bounce"); 
+
+            //target odd or even child elements using the CSS :odd or :even
+            $(".target:even").addClass("animate__animated animate__shakeX"); 
+
+            //can also target the body
+            //animate the body 
+            
+
+            //added the click function to the week 13 file but on the original.
+            $(document).click(function() {
+                $("body").addClass("animate__animated animate__hinge"); 
+            })
+
+        });
+
+    </script>
+</head>
+
+
+<body>
+
+    <!-- Adding comment to say don't change the code -->
+    <!-- Code below this line should not be changed -->
+    <div class="container-fluid">
+        <h3 class="text-primary text-center">jQuery Playground</h3>
+    
+        <div class="row">
+
+            <div class="col-xs-6">
+                <!-- class well adds a sense of depth to each column -->
+
+                <!-- add a label to each well -->
+                <h4>#left-well</h4>
+
+                <!-- Add id to each well class -->
+                <div class="well" id="left-well">
+                    <!-- add class of target to each button - this isn't for styling but for selecting these elements with jQuery -->
+                    <!-- add an id to each button -->
+                    <!-- add text to the button related to the id -->
+                    <button class="btn btn-default target" id="target1">#target1</button>
+                    <button class="btn btn-default target" id="target2">#target2</button>
+                    <button class="btn btn-default target" id="target3">#target3</button>
+
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <!-- class well adds a sense of depth to each column -->
+
+                <!-- add a label to each well -->
+                <h4>#right-well</h4>
+
+                <!-- Add id to each well class -->
+                <div class="well" id="right-well">
+                    <!-- add class of target to each button - this isn't for styling but for selecting these elements with jQuery -->
+                    <!-- add an id to each button -->
+                    <!-- add text to the button related to the id -->
+                    <button class="btn btn-default target" id="target4">#target4</button>
+                    <button class="btn btn-default target" id="target5">#target5</button>
+                    <button class="btn btn-default target" id="target6">#target6</button>
+                </div>
+        
+            </div>
+
+
+        </div>
+    
+    </div>
+      
+      
+    
+</body>
+</html>
