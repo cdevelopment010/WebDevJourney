@@ -1,0 +1,146 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+header {
+    min-height: 10vh; 
+    width: 100%; 
+}
+
+.logo {
+    text-align: center;
+    margin: 3rem;
+    font-size: 4rem; 
+}
+
+nav {
+    min-height: 50px;
+    width: 100%;
+    background-color: blue; 
+    color: white; 
+    position: relative;
+}
+
+/* Hamburger Bar */
+.hamburger {
+    position: absolute; 
+    top: 50px; 
+    right: 25px; 
+    transform: translate(25px, -50px);
+}
+
+.line {
+    width: 35px; 
+    height: 3px; 
+    background-color: white;
+    margin: 5px; 
+    transition: 0.5s all ease;
+}
+
+.active .l1 {
+    -webkit-transform: rotate(45deg) translate(5px, 8px);
+    transform: rotate(45deg) translate(5px, 8px);
+}
+.active .l2 {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.active .l3 {
+    -webkit-transform: rotate(-45deg) translate(3px, -7px);
+    transform: rotate(-45deg) translate(3px, -7px);
+}
+
+
+/* Nav Items */
+
+.nav-list {
+    width: 100%; 
+    padding-top: 50px; 
+}
+
+li {
+    list-style-type: none;
+}
+
+
+.dropDown {
+    background-color: #121212;
+    border-top: dashed #f1f1f1 1px; 
+}
+
+.activeIcon{
+    transform: rotate(90deg);
+}
+
+
+.sub-menu {
+    padding-left: 20px; 
+    background-color: #555555;
+}
+
+.sub-menu li {
+    padding: 10px;
+    border-top: dashed #121212 1px;
+    cursor: pointer;
+}
+
+.sub-menu li:hover {
+    background-color: blue;
+    color: white;
+}
+
+/* Helper class */
+.hidden {
+    display: none;
+}
+
+
+
+@media screen and (min-width: 64em) {
+    body {
+        overflow: hidden;
+    }
+
+    .hamburger {
+        display: none; 
+    }
+    nav {
+        height: 50px;
+    }
+    .nav-list {
+        padding: 0;
+        height: 100%; 
+        display: flex;
+        align-items: stretch;
+        justify-content: space-evenly;
+    }
+    .dropDown {
+        background-color: #121212;
+        border-top: none;
+        position: relative;
+        padding: 0 25px;
+    }
+    i, .sub-menu {
+        
+        transition: 0.2s all ease-in-out;
+    }
+    .sub-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+
+    .dropDown:hover .sub-menu {
+        display: block;
+        width: 50vw; 
+        top: 100%; 
+        left: 0;
+    }
+
+    .dropDown:hover i { 
+        transform: rotate(90deg);
+    }
+}
