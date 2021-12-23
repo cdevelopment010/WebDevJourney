@@ -1,0 +1,17 @@
+{
+  "name": "goals",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "sass": "node-sass -w ./scss -o ./css --output-style-compress"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.0",
+    "normalize-scss": "^7.0.1"
+  }
+}
