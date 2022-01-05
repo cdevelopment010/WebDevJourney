@@ -1,0 +1,139 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    -mox-box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    width: 100vw; 
+}
+main {
+    height: 50%; 
+    width: 60%;
+    background-color: #2B2B2BCC;
+    border-radius: 10px;
+}
+
+section {
+    color: #ffffff;
+    display: grid;
+    padding: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%; 
+}
+
+button {
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.shadow {
+    color: #2B2B2BCC;
+    background-color: #E9E9E9;
+    border: none;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);   
+}
+
+.item {
+    display: grid;
+    position: relative; 
+}
+
+input {
+    padding: 5px; 
+}
+
+
+i {
+    color: #2B2B2BCC;
+    position: absolute; 
+    bottom: 5px;
+    right: 10px; 
+    cursor: pointer;
+}
+
+i:hover {
+    color: #37e8f0;
+}
+
+.slider { 
+    margin-top: 5px;
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 0; 
+    height: 5px; 
+    border: none;
+    width: 100%; 
+    background-color: #E9E9E9; 
+    outline: none; /* Remove outline */
+    border-radius: 3px;
+
+}
+
+
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #E9E9E9;
+    margin-top: -2px;
+}
+
+.slider::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #E9E9E9;
+    margin-top: -2px;
+}
+
+.modal-pop-up {
+    width: 80%; 
+    text-align: center;
+    position: fixed; 
+    background-color: white; 
+    padding: 30px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25); 
+}
+
+.body-color {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.opacity-50 {
+    opacity: 50%; 
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (max-height: 550px) {
+    main {
+        height: 90%;
+        width: 60%;
+        background-color: #2B2B2BCC;
+        border-radius: 10px;
+    }
+}

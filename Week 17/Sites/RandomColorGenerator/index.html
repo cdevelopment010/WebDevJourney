@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Generator</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontawesome icons -->
+    <script src="https://kit.fontawesome.com/48e9ba994a.js" crossorigin="anonymous"></script>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main>
+        <section>
+            <button type="button shadow" id="btn">Click for random color</button>
+
+            <div class="item">
+                <label for="hexColor">Hex code:</label>
+                
+                <input type="text" id="hexColor" class="shadow">
+                <i class="fas fa-clipboard" id="clipboardHex"></i>
+           
+            </div>
+            <div class="item">
+                <label for="rgbaColor">RGBA code:</label>
+                <input type="text" id="rgbaColor" class="shadow">
+                <i class="fas fa-clipboard" id="clipboardRgba"></i>
+            </div>
+            <div class="item">
+                <label for="rgbaColor">Transparency:</label>
+                <input type="range" min="0" max="100" value="100" class="slider" id="myRange">
+            </div>
+        </section>
+    </main>
+
+
+    <div class="modal-pop-up hidden" id="modal">
+        <p>Enter your own rgba or hexcode and hit enter to convert</p>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
