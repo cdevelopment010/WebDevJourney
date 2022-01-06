@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  height: 100vh;
+  background-color: #0d192b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.line {
+  height: 1px;
+  width: 90%;
+  margin: auto;
+  background-color: #2f415b; }
+
+.container {
+  background-color: #14253d;
+  max-width: 350px;
+  min-height: 500px;
+  width: 80vw;
+  border-radius: 10px;
+  padding: 20px; }
+
+.img {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../images/image-equilibrium.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  cursor: pointer; }
+  .img img {
+    display: none; }
+  .img:hover {
+    background: url("../images/image-equilibrium.jpg") rgba(0, 255, 247, 0.5);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay; }
+    .img:hover img {
+      display: flex; }
+
+.title {
+  color: white;
+  font-weight: 600;
+  cursor: pointer; }
+  .title:hover {
+    color: #00fff7; }
+
+.text {
+  color: #8bacda;
+  font-weight: 300; }
+  .text span {
+    color: white;
+    cursor: pointer; }
+    .text span:hover {
+      color: #00fff7; }
+
+.item {
+  display: flex;
+  align-items: center; }
+  .item img {
+    margin-right: 10px; }
+
+.eth {
+  color: #00fff7;
+  font-weight: 600; }
+
+.time {
+  justify-self: end; }
+
+.avatar {
+  height: 40px;
+  width: 40px;
+  border: 1px solid white;
+  background: url("../images/image-avatar.png");
+  border-radius: 50%;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+.mb-10 {
+  margin-bottom: 10px; }
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between; }
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center; }
+
+@media screen and (max-height: 500px) {
+  body {
+    display: grid;
+    margin-top: 30px; }
+  main {
+    margin: auto; } }
