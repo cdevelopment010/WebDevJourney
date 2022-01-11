@@ -56,6 +56,8 @@ class Counter extends react.Component {
                         <button onClick={this.reset}>Reset</button>
                     </div>
                 </div>
+
+                <p>TEST UPDATE</p>
             </div>
 
             
