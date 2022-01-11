@@ -1,0 +1,44 @@
+body {
+  background-color: #222; 
+  color: white;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+button {
+  padding: 15px; 
+  text-transform: uppercase;
+  border-radius: 10px; 
+  border: 2px solid transparent; 
+  background-color: #eee;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #222; 
+  color: white; 
+  border: 2px solid white; 
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  height: 100%; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.flex {
+  display: flex; 
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.counter {
+  font-size: 5rem;
+}
