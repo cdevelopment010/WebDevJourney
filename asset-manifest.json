@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/cdevelopment010/WebDevJourney/tree/main/Week18/Sites/counter/static/css/main.ca152cdb.css",
-    "main.js": "/cdevelopment010/WebDevJourney/tree/main/Week18/Sites/counter/static/js/main.c2659da3.js",
-    "static/js/787.11f72ef9.chunk.js": "/cdevelopment010/WebDevJourney/tree/main/Week18/Sites/counter/static/js/787.11f72ef9.chunk.js",
-    "index.html": "/cdevelopment010/WebDevJourney/tree/main/Week18/Sites/counter/index.html",
-    "main.ca152cdb.css.map": "/cdevelopment010/WebDevJourney/tree/main/Week18/Sites/counter/static/css/main.ca152cdb.css.map",
-    "main.c2659da3.js.map": "/cdevelopment010/WebDevJourney/tree/main/Week18/Sites/counter/static/js/main.c2659da3.js.map",
-    "787.11f72ef9.chunk.js.map": "/cdevelopment010/WebDevJourney/tree/main/Week18/Sites/counter/static/js/787.11f72ef9.chunk.js.map"
+    "main.css": "/WebDevJourney/Week18/Sites/counter/static/css/main.ca152cdb.css",
+    "main.js": "/WebDevJourney/Week18/Sites/counter/static/js/main.cbc4629e.js",
+    "static/js/787.11f72ef9.chunk.js": "/WebDevJourney/Week18/Sites/counter/static/js/787.11f72ef9.chunk.js",
+    "index.html": "/WebDevJourney/Week18/Sites/counter/index.html",
+    "main.ca152cdb.css.map": "/WebDevJourney/Week18/Sites/counter/static/css/main.ca152cdb.css.map",
+    "main.cbc4629e.js.map": "/WebDevJourney/Week18/Sites/counter/static/js/main.cbc4629e.js.map",
+    "787.11f72ef9.chunk.js.map": "/WebDevJourney/Week18/Sites/counter/static/js/787.11f72ef9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ca152cdb.css",
-    "static/js/main.c2659da3.js"
+    "static/js/main.cbc4629e.js"
   ]
 }
