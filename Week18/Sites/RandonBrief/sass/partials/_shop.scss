@@ -1,0 +1,65 @@
+#shop-main {
+    width: 80%; 
+    margin: 10px auto;
+    h1 {
+        text-align: center;
+        color: black;
+        position: relative; 
+        &:after {
+            content: ""; 
+            position: absolute;
+            top: 100%; 
+            left: 10%;  
+            width: 80%; 
+            height: 3px; 
+            background-color: $primary-col; 
+
+            @include responsive(tablet) {
+                width: 60%;
+                left: 20%; 
+            }
+        }
+    }
+    .cars {
+        margin-top: 20px; 
+        display: flex; 
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .car {
+        display: flex; 
+        align-items: flex-start;
+        justify-content: space-evenly;
+        // padding: 10px; 
+        gap: 10px; 
+        // border: 1px solid black;
+
+
+        .img {
+            flex: 1 0 auto;
+            height: 100px; 
+            width: 100px; 
+            background-color: $bg-col;
+        }
+
+        .desc {
+            h4 {
+                color: $primary-col;
+            }
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .load-more {
+        margin-top: 20px; 
+        color: $primary-col; 
+        padding: 0 10px; 
+
+        &:hover {
+            background-color: $primary-col;
+            color: $bg-col
+        }
+    }
+}

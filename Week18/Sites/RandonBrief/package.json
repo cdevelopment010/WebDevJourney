@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  },
+  "name": "randonbrief",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "sass": "node-sass -w ./sass -o ./css --output-style-compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

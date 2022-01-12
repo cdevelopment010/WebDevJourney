@@ -1,0 +1,110 @@
+header {
+    position: -webkit-sticky;
+    position: sticky;
+    align-self: flex-start; //because the body is flex this is needed to keep the header at the top
+    top: 0; 
+    width: 100%; 
+    z-index: 100; 
+    
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 75px;
+    padding: 16px;
+    background-color: $bg-col;
+    color: $primary-col;
+
+
+    .logo {
+        font-size: 2.5rem;
+        font-family: 'Patua One', cursive;
+        a {
+            color: $primary-col;
+        }
+    }
+   
+}
+
+.burger {
+    // position: absolute; 
+    // top: 25px; 
+    // right: 25px; 
+
+
+    .line {
+        width: 35px;
+        height: 5px; 
+        background-color: $primary-col; 
+        margin: 3px;
+        opacity: 1;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    &.active {
+        .line1 {
+            transform: rotate(45deg) translate(6px, 5px);
+        }
+        .line2{
+            opacity: 0;
+        }
+        .line3{
+            transform: rotate(-45deg) translate(6px, -5px);
+        }
+    }
+}
+
+nav {
+    ul {
+        background-color: $bg-col;
+        position: absolute; 
+        width: 100%; 
+        top: 100%; 
+        left: 0; 
+        text-align: center; 
+        li {
+            margin: 10px 0; 
+            a {
+                color: $primary-col;
+                position: relative;
+            }
+            a:hover {
+                &:before, &:after{
+                    position: absolute; 
+                    content: ""; 
+                    width: 100%;
+                    height: 2px; 
+                    background-color: $primary-col;
+                    left: 0; 
+                    top: -2px; 
+                }
+                &:after {
+                    top: 100%; 
+                }
+            }
+        }
+    }
+}
+
+.hidden-nav {
+    display: none; 
+}
+
+@include responsive(tablet) {
+    header {
+        padding: 0 25px; 
+
+
+        ul {
+            position: relative;
+            gap: 20px; 
+        }
+
+        .burger {
+            display: none; 
+        }
+        .hidden-nav {
+            display: flex; 
+        }
+    }
+}

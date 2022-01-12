@@ -1,0 +1,33 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    min-height: 80vh; 
+    display: flex; 
+    flex-direction: column;
+    gap: 20px; 
+    justify-content: space-between;
+}
+
+li {
+    list-style-type: none;   
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

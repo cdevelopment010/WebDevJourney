@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif; }
+
+main {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between; }
+
+li {
+  list-style-type: none; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  align-self: flex-start;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 75px;
+  padding: 16px;
+  background-color: #333;
+  color: #00bfa5; }
+  header .logo {
+    font-size: 2.5rem;
+    font-family: 'Patua One', cursive; }
+    header .logo a {
+      color: #00bfa5; }
+
+.burger .line {
+  width: 35px;
+  height: 5px;
+  background-color: #00bfa5;
+  margin: 3px;
+  opacity: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease; }
+
+.burger.active .line1 {
+  transform: rotate(45deg) translate(6px, 5px); }
+
+.burger.active .line2 {
+  opacity: 0; }
+
+.burger.active .line3 {
+  transform: rotate(-45deg) translate(6px, -5px); }
+
+nav ul {
+  background-color: #333;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  text-align: center; }
+  nav ul li {
+    margin: 10px 0; }
+    nav ul li a {
+      color: #00bfa5;
+      position: relative; }
+    nav ul li a:hover:before, nav ul li a:hover:after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: #00bfa5;
+      left: 0;
+      top: -2px; }
+    nav ul li a:hover:after {
+      top: 100%; }
+
+.hidden-nav {
+  display: none; }
+
+@media screen and (min-width: 48em) {
+  header {
+    padding: 0 25px; }
+    header ul {
+      position: relative;
+      gap: 20px; }
+    header .burger {
+      display: none; }
+    header .hidden-nav {
+      display: flex; } }
+
+footer {
+  background-color: #00bfa5;
+  min-height: 10vh; }
+
+#home-main .hero {
+  min-height: 40vh;
+  background: url("../../images/cars-hero.jpg") #00bfa5;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: end;
+  align-items: center; }
+  @media screen and (min-width: 48em) {
+    #home-main .hero {
+      min-height: 60vh;
+      padding: 20px; } }
+  #home-main .hero .text-hero {
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 30vh;
+    color: #00bfa5; }
+    @media screen and (min-width: 48em) {
+      #home-main .hero .text-hero {
+        min-height: 50vh;
+        margin-right: 10px; } }
+    @media screen and (min-width: 90em) {
+      #home-main .hero .text-hero {
+        min-height: 50vh;
+        margin-right: 100px; } }
+    #home-main .hero .text-hero div {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: right; }
+    #home-main .hero .text-hero button {
+      cursor: pointer;
+      width: 100%;
+      background-color: #00bfa5;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-weight: bold; }
+
+#home-main .about-team {
+  width: 80%;
+  margin: 0 auto 20px auto; }
+  #home-main .about-team h2 {
+    text-align: center;
+    color: black;
+    position: relative; }
+    #home-main .about-team h2:after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 10%;
+      width: 80%;
+      height: 3px;
+      background-color: #00bfa5; }
+      @media screen and (min-width: 48em) {
+        #home-main .about-team h2:after {
+          width: 60%;
+          left: 20%; } }
+
+#home-main .persons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; }
+
+#home-main .person {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: flex-start; }
+  #home-main .person .img {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #00bfa5; }
+
+#home-main .reverse {
+  flex-direction: row-reverse; }
+
+#shop-main {
+  width: 80%;
+  margin: 10px auto; }
+  #shop-main h1 {
+    text-align: center;
+    color: black;
+    position: relative; }
+    #shop-main h1:after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 10%;
+      width: 80%;
+      height: 3px;
+      background-color: #00bfa5; }
+      @media screen and (min-width: 48em) {
+        #shop-main h1:after {
+          width: 60%;
+          left: 20%; } }
+  #shop-main .cars {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; }
+  #shop-main .car {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 10px; }
+    #shop-main .car .img {
+      flex: 1 0 auto;
+      height: 100px;
+      width: 100px;
+      background-color: #333; }
+    #shop-main .car .desc {
+      display: flex;
+      flex-direction: column; }
+      #shop-main .car .desc h4 {
+        color: #00bfa5; }
+  #shop-main .load-more {
+    margin-top: 20px;
+    color: #00bfa5;
+    padding: 0 10px; }
+    #shop-main .load-more:hover {
+      background-color: #00bfa5;
+      color: #333; }
