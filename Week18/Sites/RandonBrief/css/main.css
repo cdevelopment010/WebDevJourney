@@ -107,7 +107,7 @@ footer {
 
 #home-main .hero {
   min-height: 40vh;
-  background: url(/images/cars-hero.jpg) #00bfa5;
+  background: #00bfa5 url("../images/cars-hero.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
