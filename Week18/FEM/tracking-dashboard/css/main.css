@@ -21,6 +21,7 @@ main {
   grid-template-rows: max-content;
   grid-template-columns: 1fr;
   justify-content: center;
+  grid-template-areas: "avatar" "work" "play" "study" "exercise" "social" "self";
   width: 90%;
   margin: 30px auto 20px; }
   @media screen and (min-width: 64em) {
