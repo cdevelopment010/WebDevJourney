@@ -21,11 +21,14 @@ li {
     list-style-position: inside;
 }
 
-p:first-of-type {
+/* p:first-of-type {
     margin: 1rem 0 0 0;
 }
 p:last-of-type {
     margin: 0 0 1rem 0;
+} */
+p {
+    margin: 0.5rem 0;
 }
 
 section {
