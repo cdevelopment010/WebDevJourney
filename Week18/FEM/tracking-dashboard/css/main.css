@@ -107,37 +107,6 @@ main {
   .card-body .title {
     grid-area: title;
     font-weight: 500; }
-  .card-body .img {
-    background-color: #bdc1ff;
-    -webkit-mask-image: url("../../images/icon-ellipsis.svg");
-    mask-image: url("../../images/icon-ellipsis.svg");
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-position: top right;
-    mask-position: top right;
-    height: 100%;
-    width: 100%;
-    grid-area: img;
-    align-self: flex-start;
-    justify-self: end;
-    cursor: pointer;
-    position: relative; }
-    .card-body .img:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: -1; }
-    .card-body .img:hover {
-      background-color: white; }
-    .card-body .img:hover:before {
-      top: -50px;
-      left: -50px;
-      right: -50px;
-      bottom: -50px;
-      background-color: white; }
   .card-body .current {
     grid-area: current;
     font-size: 2rem;
@@ -221,3 +190,35 @@ main {
 
 .avatar-text .report {
   color: #6f76c8; }
+
+.card-body .img {
+  background-color: #bdc1ff;
+  -webkit-mask-image: url("../images/icon-ellipsis.svg");
+  mask-image: url("../images/icon-ellipsis.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: top right;
+  mask-position: top right;
+  height: 100%;
+  width: 100%;
+  grid-area: img;
+  align-self: flex-start;
+  justify-self: end;
+  cursor: pointer;
+  position: relative; }
+  .card-body .img:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; }
+  .card-body .img:hover {
+    background-color: white; }
+  .card-body .img:hover:before {
+    top: -50px;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
+    background-color: white; }
