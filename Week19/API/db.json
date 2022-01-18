@@ -1,0 +1,29 @@
+{
+    "exercises": [
+        {
+            "id": 0, 
+            "name": "Bench Press", 
+            "image": "https://cdn2.coachmag.co.uk/sites/coachmag/files/styles/insert_main_wide_image/public/2016/07/1-1-bench-press.jpg?itok=QpV4FR3Z"
+        }, 
+        {
+            "id": 1, 
+            "name": "Squat", 
+            "image": ""
+        }, 
+        {
+            "id": 2, 
+            "name": "Deadlift", 
+            "image": ""
+        }, 
+        {
+            "id": 3, 
+            "name": "Overhead Press", 
+            "image": ""
+        }, 
+        {
+            "id": 4, 
+            "name": "Bentover Row", 
+            "image": ""
+        }
+    ]
+}
