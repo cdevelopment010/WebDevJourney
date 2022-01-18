@@ -17,7 +17,7 @@ function App() {
 
 
       //create number of sets and reps per exercise on load
-      exercises.map((exercise) => {
+      exercises.forEach((exercise) => {
         exercise.set = Math.floor(Math.random()*5 + 1);
         exercise.rep = Math.floor(Math.random()*19 + 1);
       })
