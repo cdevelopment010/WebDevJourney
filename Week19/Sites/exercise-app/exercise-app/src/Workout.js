@@ -35,6 +35,9 @@ const Workout = ({
     const response = await fetch(url); 
     const exercises = await response.json(); 
 
+    console.log('selectedWorkout',selectedWorkout); 
+    console.log('numberExercises',numberExercises); 
+
     const limitedExercise = exercises.filter(exercise => {
             if(selectedWorkout === 'hiit') {
                 return exercise.HIIT;
@@ -70,7 +73,7 @@ const Workout = ({
 }
 
   useEffect(() => {
-    fetchExercises(); 
+    fetchExercises(selectedWorkout,numberExercises,hiitWork,hiitRest,hiitRounds); 
   }, [selectedWorkout,numberExercises,hiitWork,hiitRest,hiitRounds]);
 
   if (loading) {
