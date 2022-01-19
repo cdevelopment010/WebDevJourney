@@ -29,7 +29,7 @@ const Workout = ({
     console.log(reset);
   };
 
-  const fetchExercises = async () => {
+  const fetchExercises = async (selectedWorkout,numberExercises,hiitWork,hiitRest,hiitRounds) => {
     setLoading(true); 
     try {
     const response = await fetch(url); 
@@ -71,7 +71,7 @@ const Workout = ({
 
   useEffect(() => {
     fetchExercises(); 
-  }, []);
+  }, [selectedWorkout,numberExercises,hiitWork,hiitRest,hiitRounds]);
 
   if (loading) {
     return (
