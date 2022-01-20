@@ -1,3 +1,26 @@
+/******************/
+// Created date: 20/01/2022
+// author: Craig
+/******************/
+
+
+
+/*************************/
+/********Process**********/
+// Select number of discs to play with
+// select which disc to move
+// select the tower to move to
+    // Check if tower is empty
+        // if empty - move
+        // if not empty - check if disc is bigger than current disc
+            // if OK - move
+            // else reset selected disc
+// with each successful move, check if the game if over
+    // if pole3 has all the discs - game over
+    // show pop up
+/*************************/
+
+
 const pole1 = document.getElementById("pole1");
 const pole2 = document.getElementById("pole2");
 const pole3 = document.getElementById("pole3");
@@ -13,6 +36,10 @@ let targetPole = '';
 let counter = 0; 
 
 let input = 0;
+
+
+
+// Event listeners
 
 playBtn.addEventListener('click', function(){
     input = this.parentElement.children[0].value;
@@ -41,7 +68,22 @@ restartBtn.addEventListener('click', function() {
 })
 
 
+pole1.addEventListener('click', function() {
+    getFirstChild(this) ; 
+    moveToTargetPole(this);  
+}); 
+pole2.addEventListener('click', function() {
+    getFirstChild(this) ; 
+    moveToTargetPole(this);
+})
+pole3.addEventListener('click', function() {
+    getFirstChild(this) ; 
+    moveToTargetPole(this);
+})
 
+
+
+// Functions below here
 
 function createDisk(num) {
     for (let i = 0; i < num; i++){
@@ -76,13 +118,10 @@ function getFirstChild(pole) {
 }
 
 function moveToTargetPole(pole) {
-    
     if (currentPole != pole && selectedDisc != '') {
         targetPole = pole; 
-
         moveDisc(currentPole, selectedDisc, targetPole); 
     } 
-
     if (currentPole == targetPole) {
         reset(); 
     }
@@ -91,8 +130,6 @@ function moveToTargetPole(pole) {
 
 
 function  moveDisc(currentPole, selectedDisc, targetPole)  {
-    
-
     if(checkEmptyPole()) {
         targetPole.insertBefore(selectedDisc, targetPole.childNodes[0]); 
         selectedDisc.style.backgroundColor = 'black'; 
@@ -109,15 +146,9 @@ function  moveDisc(currentPole, selectedDisc, targetPole)  {
     if (checkWin()) {
         restartForm.classList.remove("hidden"); 
     }
-
-    
-
     reset(); 
     return selectedDisc, targetPole, currentPole;
 }
-
-
-
 
 function checkEmptyPole() {
     if (targetPole.children.length == 0 ){
@@ -132,6 +163,8 @@ function checkDiscPosition() {
         let selectedPos = selectedDisc.id.slice(4); 
         let targetPos = targetPole.children[targetPole.children.length -1].id.slice(4)
         if(selectedPos < targetPos) {
+            selectedDisc.style.backgroundColor = 'black';
+            reset(); 
             return false;
         } else {
             return true;
@@ -158,18 +191,3 @@ function checkWin() {
         return false; 
     }
 }
-
-
-
-pole1.addEventListener('click', function() {
-    getFirstChild(this) ; 
-    moveToTargetPole(this);  
-}); 
-pole2.addEventListener('click', function() {
-    getFirstChild(this) ; 
-    moveToTargetPole(this);
-})
-pole3.addEventListener('click', function() {
-    getFirstChild(this) ; 
-    moveToTargetPole(this);
-})
