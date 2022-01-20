@@ -2,6 +2,7 @@
 let num = 5;
 let circleList = [];
 let btn = document.getElementById('startBtn'); 
+let resultMessage = document.getElementById('result')
 let canvas = document.getElementById("myCanvas");
 let ctx = canvas.getContext("2d");
 
@@ -62,11 +63,14 @@ function calculateTime() {
     }); 
     totalTime = totalTime / 1000; 
 
-    if (totalTime / num <= 1) {
-        alert(`Wow there! Fast as lighening! Total time ${totalTime}`)
-    } else {
-        alert(`Oh no! Maybe you need more practice...\nTotal time ${totalTime}`)
-    }
+    let message = totalTime / num <= 1 ? 
+            `Wow there! Fast as lighening! Total time ${totalTime}` : 
+            `Oh no! Maybe you need more practice...\nTotal time ${totalTime}`; 
+
+    resultMessage.classList.remove('hidden'); 
+    resultMessage.innerHTML = message;
+
+
 }
 
 
@@ -79,6 +83,11 @@ function calculateTime() {
 
 
 btn.addEventListener('click', function() {
+    num = 5; 
+    circleList = [];
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    resultMessage.innerHTML = '';
+    resultMessage.classList.add('hidden')
     setIntervalReps(createCircle, 1000, num); 
 })
 

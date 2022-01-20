@@ -25,12 +25,7 @@ p {
 button {
     margin: 20px 0;
 }
-
-.circle {
-    height: 30px;
-    width: 30px; 
-    border-radius: 50%; 
-    border: 1px solid blue;
-    background-color: pink;  
+.hidden {
+    display: none;
 }
 
