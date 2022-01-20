@@ -22,6 +22,9 @@ body {
 p {
     margin: 20px 0; 
 }
+button {
+    margin: 20px 0;
+}
 
 .circle {
     height: 30px;

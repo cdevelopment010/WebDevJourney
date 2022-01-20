@@ -1,6 +1,7 @@
 
 let num = 5;
 let circleList = [];
+let btn = document.getElementById('startBtn'); 
 let canvas = document.getElementById("myCanvas");
 let ctx = canvas.getContext("2d");
 
@@ -77,7 +78,9 @@ function calculateTime() {
 
 
 
-setIntervalReps(createCircle, 1000, num); 
+btn.addEventListener('click', function() {
+    setIntervalReps(createCircle, 1000, num); 
+})
 
 
 canvas.addEventListener('click', function(event) {
