@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sites | Tower of Hanoi</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <h1>Towers of Hanoi</h1>
+
+    <div id="start-form" class="start-form">
+        <label for="">
+            How many discs? (between 3 and 10)
+            <input placeholder="3" type="number" id="discNumber" min="3" max="10">
+            <button id="playBtn">Let's play!</button>
+        </label>
+    </div>
+    <div id="restart-form" class="restart-form hidden">
+        <label for="">
+            <h3>You've won!</h3>
+            <button id="restartBtn">Restart</button>
+        </label>
+    </div>
+    <p id="counter"></p>
+
+    <div class="tower">
+        <div class="pole" id="pole1"></div>
+        <div class="pole" id="pole2"></div>
+        <div class="pole" id="pole3"></div>
+    </div>
+    
+    <script src='./index.js'></script>
+</body>
+</html>
