@@ -18,8 +18,8 @@ if (window.innerWidth < 600) {
 canvas.height = canvas.width; 
 canvas.style.backgroundColor = 'white'; 
 
-let centerX = canvas.width / 2;
-let centerY = canvas.height / 2;
+let centerX = canvas.width;
+let centerY = canvas.height;
 let radius = 30;
 
 
@@ -27,7 +27,7 @@ let radius = 30;
 function createCircle() {
     let newPath = new Path2D();  
     
-    newPath.arc(centerX*Math.random(),centerY*Math.random(), radius, 0, 2 * Math.PI); 
+    newPath.arc(centerX*(Math.random()),centerY*(Math.random()), radius, 0, 2 * Math.PI); 
     ctx.fillStyle='blue'; 
     ctx.fill(newPath); 
     ctx.stroke(newPath); 
@@ -64,7 +64,7 @@ function calculateTime() {
     totalTime = totalTime / 1000; 
 
     let message = totalTime / num <= 1 ? 
-            `Wow there! Fast as lighening! Total time ${totalTime}` : 
+            `Wow there! Fast as lightning! Total time ${totalTime}` : 
             `Oh no! Maybe you need more practice...\nTotal time ${totalTime}`; 
 
     resultMessage.classList.remove('hidden'); 
@@ -72,14 +72,6 @@ function calculateTime() {
 
 
 }
-
-
-
-
-
-
-
-
 
 
 btn.addEventListener('click', function() {
