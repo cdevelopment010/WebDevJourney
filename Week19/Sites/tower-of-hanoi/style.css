@@ -31,7 +31,7 @@ body {
 .pole:before, .pole:after {
     content: '';
     position: absolute;
-    background-color: brown; 
+    background-color: #C04000; 
 }
 
 .pole:before {
@@ -46,15 +46,23 @@ body {
     left: 50%; 
     top: 0; 
     transform: translateX(-50%); 
+    border-radius: 10px 10px 0 0;
 }
 
+.pole:first-of-type:before {
+    border-radius: 10px 0 0 10px; 
+}
+
+.pole:last-of-type:before {
+    border-radius: 0 10px 10px 0; 
+}
 
 .disc {
     max-width: 80%; 
     width: 100%; 
     border-radius: 20px; 
     height: 30px; 
-    background-color: black; 
+    background-color: #670A0A; 
     position: absolute; 
     bottom: 30px; 
     transform: translateX(-50%); 

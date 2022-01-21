@@ -34,7 +34,7 @@ let selectedDisc = '';
 let currentPole = '';
 let targetPole = ''; 
 let counter = 0; 
-
+let discColor = '#670A0A';
 let input = 0;
 
 
@@ -44,7 +44,7 @@ let input = 0;
 playBtn.addEventListener('click', function(){
     input = this.parentElement.children[0].value;
     if (input >= 3 && input <=10) {
-        createDisk(input); 
+        createDisc(input); 
         this.parentElement.children[0].value  = "";
         startForm.classList.add("hidden");  
         updateCounter();
@@ -85,16 +85,15 @@ pole3.addEventListener('click', function() {
 
 // Functions below here
 
-function createDisk(num) {
+function createDisc(num) {
     for (let i = 0; i < num; i++){
         let offset = 30 + (i*30); 
-        let disk = document.createElement("div"); 
-        
-        disk.classList.add('disc'); 
-        disk.style.bottom = offset + 'px'; 
-        disk.style.width = 80- (i*(50/(num-1)))+'%'; 
-        disk.id = `disk${i}`; 
-        pole1.appendChild(disk); 
+        let disc = document.createElement("div"); 
+        disc.classList.add('disc'); 
+        disc.style.bottom = offset + 'px'; 
+        disc.style.width = 80- (i*(50/(num-1)))+'%'; 
+        disc.id = `disc${i}`; 
+        pole1.appendChild(disc); 
 
     }
 }
@@ -105,13 +104,13 @@ function getFirstChild(pole) {
         currentPole = pole;
         if ( pole.getElementsByClassName('disc')[pole.getElementsByClassName('disc').length-1]) {
             selectedDisc = pole.getElementsByClassName('disc')[pole.getElementsByClassName('disc').length-1];
-            selectedDisc.style.backgroundColor = 'blue'; 
+            selectedDisc.style.backgroundColor = 'black'; 
             return selectedDisc
         } 
     } 
 
     if (selectedDisc == pole.getElementsByClassName('disc')[pole.getElementsByClassName('disc').length-1])  {
-        selectedDisc.style.backgroundColor = 'black';
+        selectedDisc.style.backgroundColor = discColor;
         reset(); 
     }
     
@@ -132,12 +131,12 @@ function moveToTargetPole(pole) {
 function  moveDisc(currentPole, selectedDisc, targetPole)  {
     if(checkEmptyPole()) {
         targetPole.insertBefore(selectedDisc, targetPole.childNodes[0]); 
-        selectedDisc.style.backgroundColor = 'black'; 
+        selectedDisc.style.backgroundColor = discColor; 
         selectedDisc.style.bottom = 30  + "px"; 
         updateCounter();
     } else if (checkDiscPosition()) {
         targetPole.append(selectedDisc); 
-        selectedDisc.style.backgroundColor = 'black'; 
+        selectedDisc.style.backgroundColor = discColor; 
         selectedDisc.style.bottom = Math.max(60,(30*(targetPole.children.length)))+ "px"; 
         reset(); 
         updateCounter(); 
@@ -163,7 +162,7 @@ function checkDiscPosition() {
         let selectedPos = selectedDisc.id.slice(4); 
         let targetPos = targetPole.children[targetPole.children.length -1].id.slice(4)
         if(selectedPos < targetPos) {
-            selectedDisc.style.backgroundColor = 'black';
+            selectedDisc.style.backgroundColor = discColor;
             reset(); 
             return false;
         } else {
