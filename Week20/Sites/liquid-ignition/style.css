@@ -1,0 +1,224 @@
+*{
+    margin: 0; 
+    padding: 0; 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-position: inside;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;}
+body {
+    font-family: 'Mulish', sans-serif;
+    font-size: 14px; 
+}
+
+
+
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    height: 80vh; 
+    overflow: hidden; 
+    /* background: #08080A url('./images/hero-lg.jpg'); 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover ;    */
+    color: #FD0102;
+    padding: 20px 10px; 
+
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+}
+
+header img {
+    z-index: -1; 
+    height: 1296px; 
+    width: 1440px; 
+    position: absolute; 
+    left: -50%; 
+    bottom: 0; 
+}
+
+nav {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.logo {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+
+}
+
+nav ul {
+    display: flex; 
+    justify-content: space-evenly;
+    gap: 20px; 
+    font-size: 1.25em;
+}
+
+nav li {
+    list-style: none;
+}
+nav li:hover {
+    color: #E5E5E5;
+}
+
+.hero-text {
+    position: absolute; 
+    /* left: 15px;  */
+    right: 5%; 
+    top: 50%; 
+    transform: translate(0, -50%); 
+    font-family: 'Lobster', cursive;
+    color: #E5E5E5; 
+    font-size: 1.5em;
+    text-shadow: 1px 1px #08080A 
+}
+section {
+    margin-top: 50px; 
+}
+h2 {
+    font-family: 'Lobster', cursive;
+    color: #08080A; 
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+img {
+    width: 300px; 
+    height: 300px; 
+    object-fit: cover;
+}
+
+p {
+    margin: 10px 0; 
+}
+
+.event {
+    margin-bottom: 20px; 
+}
+
+.event p:first-of-type {
+    font-size: 1.2em;
+}
+
+
+
+.drinks {
+    display: grid;
+    gap: 20px; 
+    justify-content: center;
+}
+
+.img {
+    position: relative;
+    height: 300px; 
+    width: 300px; 
+    cursor: pointer;
+}
+
+.img .overlay {
+    position: absolute; 
+    height: 100%; 
+    width: 100%; 
+    background: rgba(0,0,0,0.0); 
+    left: 0; 
+    z-index: 10; 
+    transition: all 0.2s ease;
+}
+
+.img p {
+    position: absolute;
+    bottom: 0px;
+    left: 5px; 
+    opacity: 0; 
+    transition: all 0.2 ease;  
+}
+
+.img:hover .overlay {
+    background: rgba(0,0,0,0.5); 
+}
+
+.img:hover p {
+    color: white; 
+    opacity: 1;
+    z-index: 11; 
+}
+
+
+
+footer {
+    padding: 20px; 
+    margin-top: 50px; 
+    background-color: #08080A; 
+    color: #E5E5E5;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+}
+
+footer li {
+    list-style-type: none;
+}
+
+@media screen and (min-width: 64em) {
+    body {
+        font-size: 24px; 
+    }
+    header {
+        padding: 20px 150px; 
+    }
+    header img {
+        left: 0; 
+        bottom: 0px; 
+        width: 100%; 
+    }
+    nav {
+        flex-direction: row; 
+    }
+
+    /* .hero-text {
+        left: 60%; 
+    } */
+    .event {
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        gap: 20px; 
+        justify-items: center; 
+    }
+
+    .drinks {
+        display: grid; 
+        grid-template-columns: repeat(3,1fr); 
+        justify-items: center;
+    }
+
+    footer {
+        flex-direction: row; 
+        justify-content: space-between;
+        padding: 20px 150px; 
+    }
+
+    footer ul {
+        display: flex; 
+        gap: 20px; 
+    }
+}
