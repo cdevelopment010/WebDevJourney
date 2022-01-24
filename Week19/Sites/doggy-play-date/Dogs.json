@@ -1,0 +1,47 @@
+[
+    {
+        "id": 0, 
+        "name": "Baz",
+        "age": 14, 
+        "interest": ["tennis balls, treats, giving paw"], 
+        "about": "Baz may be old but still full of energy. He enjoys trying to fit as many tennis balls in his mouth as possible.",
+        "img": "https://raw.githubusercontent.com/cdevelopment010/WebDevJourney/main/Week19/Sites/doggy-play-date/images/baz.JPG"
+    
+    },
+    {
+        "id": 1, 
+        "name": "Jackson",
+        "age": 0.5, 
+        "interest": ["Cuddles, barking at plants"], 
+        "about": "Jackson is an energetic little pup that enjoys nothing more than playing in the garden.",
+        "img": "https://raw.githubusercontent.com/cdevelopment010/WebDevJourney/main/Week19/Sites/doggy-play-date/images/Dog1.jpg"
+    
+    },
+    {
+        "id": 2, 
+        "name": "Rosie",
+        "age": 9, 
+        "interest": ["Long walks, going into puddles"], 
+        "about": "Rosie enjoys going for long walks in the park or forest, even more so if it has been raining!",
+        "img": "https://raw.githubusercontent.com/cdevelopment010/WebDevJourney/main/Week19/Sites/doggy-play-date/images/Dog2.jpg"
+    
+    },
+    {
+        "id": 3, 
+        "name": "Ellie",
+        "age": 6, 
+        "interest": ["Chasing sheep, playing fetch"], 
+        "about": "Ellie is a working dog, but even after working she loves to play fetch all night.",
+        "img": "https://raw.githubusercontent.com/cdevelopment010/WebDevJourney/main/Week19/Sites/doggy-play-date/images/Dog3.jpg"
+    
+    },
+    {
+        "id": 4, 
+        "name": "Frankie",
+        "age": 4, 
+        "interest": ["Big sticks, tug of war"], 
+        "about": "Frankie never seems to run out of energy. Always up for playing with other dogs in the",
+        "img": "https://raw.githubusercontent.com/cdevelopment010/WebDevJourney/main/Week19/Sites/doggy-play-date/images/Dog4.jpg"
+    
+    }
+]
