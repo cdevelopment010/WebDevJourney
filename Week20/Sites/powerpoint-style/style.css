@@ -1,0 +1,103 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+main {
+    height: 100vh; 
+    width: 100vw; 
+    position: relative;
+    overflow: hidden;
+}
+section {
+    position: absolute;
+    width: 100vw; 
+    height: 100vh; 
+    transition: left ease 1s;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+}
+#section1 {
+    background-color: lightblue;
+    top: 0; 
+    left: 0; 
+}
+#section2 {
+    background-color: lightcoral;
+    left: 100%; 
+}
+
+#section3 {
+    background-color: lightgreen;
+    left: 100%; 
+}
+#section4 {
+    background-color: lightslategray;
+    left: 100%; 
+}
+#section5 {
+    background-color: lightyellow;
+    left: 100%; 
+}
+
+
+.modal {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    padding: 25px; 
+    background-color: white; 
+    z-index: 3; 
+    text-align: center;
+}
+
+.black-overlay {
+    background-color: rgba(0,0,0,0.2); 
+    z-index: 2;
+    position: absolute; 
+    height: 100vh; 
+    width: 100vw; 
+    top: 0; 
+    left: 0;  
+}
+
+.hidden {
+    display: none; 
+}
+
+.warning {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.warning code {
+    border: 1px dashed black;
+}
+
+.fa-arrow-right {
+    position: absolute; 
+    bottom: 25px; 
+    right: 25px; 
+    cursor: pointer;
+}
+.fa-arrow-left {
+    position: absolute; 
+    bottom: 25px; 
+    left: 25px; 
+    cursor: pointer;
+}
+
+.fa-arrow-left:hover, .fa-arrow-right:hover {
+    color: white; 
+    text-shadow: 2px 2px rgba(0,0,0,0.2); 
+}
+
+input {
+    width: 100vw; 
+    height: auto; 
+}
