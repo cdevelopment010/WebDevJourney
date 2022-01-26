@@ -21,13 +21,12 @@ titles.forEach(title => {
         changeInnerText(this); 
     }); 
     title.addEventListener('dragend', function(e) {
-        let endX = e.clientX; 
-        let endY = e.clientY; 
-
-        console.log(endX, endY);
-        console.log(this); 
-        this.style.cssText = `position: absolute; top: ${endY}px; left: ${endX}px`
+        moveItem(this, e);
+    });
+    title.addEventListener('touchend', function(e) {
+        moveItem(this, e);
     })
+
 })
 
 
@@ -41,14 +40,25 @@ pTags.forEach(tag => {
         })
     }
 
-    tag.addEventListener('dragend', function(e) {
-        let endX = e.clientX; 
-        let endY = e.clientY; 
+    
 
-        console.log(endX, endY);
-        console.log(this); 
-        this.style.cssText = `position: absolute; top: ${endY}px; left: ${endX}px`
-    })
+    tag.addEventListener('dragend', function(e) {
+        moveItem(this, e)        
+    });
+    tag.addEventListener('touchend', function(e) {
+        clicks++; 
+        timer = setTimeout(() => {
+            if (clicks === 1) {
+                moveItem(this, e); 
+                clicks = 0; 
+            } else {
+                clearTimeout(timer); 
+                clicks = 0; 
+            }
+        }, 300); 
+            
+       
+    });
 })
 
 document.body.addEventListener('keydown', (e) => {
@@ -119,4 +129,18 @@ function changeInnerText(item) {
         item.innerText = '';
         item.appendChild(input);
         input.focus(); 
+}
+
+function moveItem(item, e) {
+    let endX = e.clientX || e.changedTouches[0].clientX; 
+    let endY = e.clientY || e.changedTouches[0].clientY; 
+
+    item.style.cssText = `position: absolute; top: ${endY}px; left: ${endX}px`
+}
+function moveItemtTouch(item, e) {
+    let endX = e.changedTouches[0].clientX; 
+    let endY = e.changedTouches[0].clientY; 
+
+    console.log(endX, endY); 
+    item.style.cssText = `position: absolute; top: ${endY}px; left: ${endX}px`
 }
