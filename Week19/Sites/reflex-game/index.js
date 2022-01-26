@@ -79,7 +79,8 @@ btn.addEventListener('click', function() {
     circleList = [];
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     resultMessage.innerHTML = '';
-    resultMessage.classList.add('hidden')
+    resultMessage.classList.add('hidden'); 
+    this.classList.toggle('hidden'); 
     setIntervalReps(createCircle, 1000, num); 
 })
 
@@ -98,6 +99,7 @@ canvas.addEventListener('click', function(event) {
                 console.log(checkFinish()); 
 
                 if (checkFinish()) {
+                    btn.classList.toggle('hidden'); 
                     calculateTime();
                 }
             return;
