@@ -4,6 +4,10 @@ body {
     color: #A39BA8; 
 }
 
+p, h1 {
+    text-align: center;
+}
+
 .flash {
     background-color: pink; 
     color: #161612; 
@@ -26,6 +30,7 @@ body {
 
 .digital-clock {
     max-width: 960px;
+    margin: 0 auto; 
     margin-bottom: 25px; 
     display: grid; 
     grid-template-columns: repeat(3,1fr);
