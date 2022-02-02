@@ -1,0 +1,88 @@
+body {
+    background-color:#96adc8; 
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto; 
+}
+
+.note {
+    font-style: italic;
+}
+
+ul {
+    padding: 0; 
+}
+
+form {
+    display: flex; 
+    flex-direction: column;
+    border: 1px solid #313b72;
+    padding: 25px; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 15px 0 rgba(0,0,0,0.25); 
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px; 
+}
+button {
+    width: 50%; 
+    justify-self: center;
+    align-self: center;
+    margin: -5px 0 0 5px;
+    padding: 5px 0; 
+    border-radius: 5px;
+    border: 1px solid transparent;
+}
+
+button:hover {
+    background-color: #da4167;
+}
+
+.card {
+    list-style-type: none;
+    padding: 20px; 
+    margin-bottom: 10px; 
+    border: 1px solid #313b72; 
+    border-radius: 5px;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25); 
+    background-color: #313b72;
+    color: white; 
+}
+
+.why {
+    line-height: 0;
+    font-size: 0; 
+    transition: 0.2s;
+}
+
+.goal-title {
+    font-size: 2rem; 
+    font-weight: bold;
+}
+
+.why-active {
+    line-height: normal;
+    font-size: 1rem;
+}
+
+i {
+    margin-left: 10px; 
+}
+
+.fa-caret-down {
+    transform: rotate(90deg); 
+    transition: 0.2s;
+}
+
+.i-active {
+    transform: rotate(0deg); 
+}

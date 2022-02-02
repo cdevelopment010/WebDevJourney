@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sites | To-do List</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/48e9ba994a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Daily Goals</h1>
+
+        <p>Set your daily goals - try to set no more than 5! This will allow you to focus on your most important tasks for the day.</p>
+        <p>
+            Once you have completed the goal, pat yourself on the back and double click the goal to remove it. 
+        </p>
+        <p class="note">This site doesn't store information. Please don't close the tab!</p>
+    </header>
+
+
+
+    <main>
+        <div class="form">
+            <form>
+                <label for="goal-item">
+                    Goal title: 
+                    <input type="text" name="goal-item" id="goal-item">
+                </label>
+                <label for="goal-why">
+                    Why is this goal important? 
+                    <textarea name="goal-why" id="goal-why" cols="30" rows="5"></textarea>
+                </label>
+                <button type="button" id="add-goal-btn">Add goal</button>
+            </form>
+        </div>
+    
+    
+        <ul id="goals">
+            
+        </ul>
+    </main>
+    
+
+    <script src="./index.js"></script>
+</body>
+</html>
