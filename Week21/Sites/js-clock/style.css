@@ -1,0 +1,220 @@
+body {
+    background-color: #2D2D25;
+    /* color: #EDF5FC;  */
+    color: #A39BA8; 
+}
+
+.flash {
+    background-color: pink; 
+    color: #161612; 
+}
+
+.alarm-set {
+    margin-bottom: 25px;
+}
+
+.set-alarm {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px; 
+}
+
+.set-alarm > * {
+    margin-right: 30px; 
+}
+
+.digital-clock {
+    max-width: 960px;
+    margin-bottom: 25px; 
+    display: grid; 
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: min-content;
+    align-items: center;
+    grid-template-areas: "hour min sec"
+        "day day day"    
+    ;
+}
+
+.digital-number {
+    border-radius: 6px;
+    border: 1px solid #A39BA8;
+    background-color: #161612;
+    text-align: center;
+    font-size: 4rem;
+    color: #A39BA8; 
+    padding: 25px; 
+}
+
+.digital-number.hour {
+    grid-area: hour; 
+}
+.digital-number.minute {
+    grid-area: min; 
+}
+.digital-number.seconds {
+    grid-area: sec; 
+}
+.digital-number.day {
+    grid-area: day; 
+    text-align: left;
+}
+
+.clock-face {
+    margin: 0 auto; 
+    margin-bottom: 25px; 
+    height: 200px; 
+    width: 200px; 
+    border-radius: 50%; 
+    position: relative; 
+}
+
+.outer-clock {
+    position: relative; 
+    height: 100%; 
+    width: 100%;
+    top: 0; 
+    left: 0; 
+    background-color: #161612;
+    border-radius: 50%; 
+    box-shadow: 0 0 15px 0 #A39BA8; 
+}
+
+.outer-clock:before, 
+.outer-clock:after, 
+.marking {
+    content: ''; 
+    position: absolute;
+    width: 5px; 
+    height: 90%; 
+    background-color: #21C063;
+    left: 49%; 
+    top: 5%;
+}
+.outer-clock:after {
+    transform: rotate(90deg); 
+}
+.marking {
+    width: 3px; 
+    background-color: #126936;
+}
+
+.marking-one {
+    transform: rotate(30deg); 
+}
+.marking-two {
+    transform: rotate(60deg); 
+}
+
+.marking-three {
+    transform: rotate(120deg); 
+}
+.marking-four {
+    transform: rotate(150deg); 
+}
+
+.inner-clock {
+    position: absolute; 
+    top: 20%; 
+    left: 20%; 
+    height: 60%; 
+    width: 60%; 
+    border-radius: 50%;
+    background-color: #161612;
+}
+
+/* .inner-clock:before {
+    content: ''; 
+    position: absolute; 
+    height: 5px; 
+    width: 5px; 
+    border-radius: 50%; 
+    background-color: #126936;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%)
+} */
+
+.hand {
+    content: ''; 
+    position: absolute; 
+    height: 6px; 
+    background-color: #21C063; 
+    width: 50%; 
+    top: 50%; 
+    left: 50%;
+    transform-origin: 0%;
+    transform: rotate(-90deg);
+    border-radius: 6px; 
+}
+
+.hand.hour-hand {
+    width: 30%;
+    z-index: 3;
+  }
+  .hand.minute-hand {
+    height: 3px;
+    z-index: 10;
+    width: 40%;
+  }
+  
+  .hand.second-hand {
+    background: #A39BA8;
+    width: 45%;
+    height: 2px;
+  }
+
+
+  input, button  {
+    background-color: #A39BA8; 
+    border: 1px solid transparent; 
+    border-radius: 3px;  
+    color: #EDF5FC; 
+    font-weight: bold;
+}
+
+input:focus {
+
+    border: 1px solid #EDF5FC; 
+}
+.modal {
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr max-content;
+    grid-template-areas: "title title"
+        "btn1 btn2"    
+    ;
+    gap: 10px; 
+    background-color: #EDF5FC;
+    border-radius: 6px;
+    padding: 30px; 
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25); 
+    z-index: 100; 
+}
+
+.modal h2 {
+    grid-area: title;
+    text-align: center;
+}
+
+.modal #confirm-btn {
+    grid-area: btn1; 
+    background-color: #126936;
+}
+
+.modal #cancel-btn {
+    grid-area: btn2; 
+    background-color: #D62839; 
+}
+
+
+
+
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sites | JS Clock</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+
+    <h1>JS Alarm Clock</h1>
+    <p>
+        Enter time for the alarm clock to go off, or leave blank to use as a clock. 
+    </p>
+    <div class="set-alarm">
+        <div class="form-control">
+            <label for="hour-alarm">
+                Hour
+                <input type="number" name="hour-alarm" id="hour-alarm" max="23" min="0">
+            </label>
+        </div>
+        <div class="form-control">
+            <label for="minute-alarm">
+                Minute
+                <input type="number" name="minute-alarm" id="minute-alarm" max="59" min="0">
+            </label>
+        </div>
+        <button id="start-alarm">Start Alarm</button>
+    </div>
+
+    <div class="alarm-set">
+    </div>
+
+
+    <div class="clock-face">
+        <div class="outer-clock">
+            <div class="marking marking-one"></div>
+            <div class="marking marking-two"></div>
+            <div class="marking marking-three"></div>
+            <div class="marking marking-four"></div>
+        </div>
+
+        <div class="inner-clock">
+            <div class="hand hour-hand"></div>
+            <div class="hand minute-hand"></div>
+            <div class="hand second-hand"></div>
+        </div>
+    </div>
+
+   <div class="digital-clock">
+    <div class="hours digital-number">0</div>
+    <div class="minutes  digital-number">0</div>
+    <div class="seconds digital-number">0</div>
+    <div class="day  digital-number">Wed</div>
+   </div>
+
+
+    <div class="modal hidden">
+        <h2>Get up you lazy bum!</h1>
+        <button id='confirm-btn'>I'm up, I'm up... </button>
+        <button id='cancel-btn'>SHHHHH! I'm sleeping</button>
+    </div>
+
+    <audio src="./assets/mixkit-classic-short-alarm-993.wav"  preload="auto"></audio>
+    <script src="./index.js"></script>
+    
+</body>
+</html>
