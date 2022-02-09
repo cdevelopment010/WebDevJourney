@@ -1,0 +1,316 @@
+:root {
+    --btn-col: hsl(322,100%,66%); 
+    --bg-hero: hsl(193,100%,96%); 
+    --dark-text: hsl(192,100%,9%); 
+    --light-text: hsl(208,11%,55%); 
+}
+
+*{
+    margin: 0; 
+    padding: 0; 
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;    
+}
+
+html {
+    font-size: 18px; 
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--dark-text); 
+}
+
+section {
+    margin-bottom: 20px; 
+    padding: 0 5vw;  
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+    padding-bottom: 20px; 
+}
+
+section img {
+    width: 100%; 
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600; 
+}
+
+button {
+    border-radius: 50px; 
+    font-weight: 700; 
+    padding: 5px 10px; 
+    background-color: white; 
+    border: 0; 
+    box-shadow: 0 4px 20px -5px rgba(0,0,0,0.25); 
+    cursor: pointer;
+}
+
+.btn {
+    background-color: var(--btn-col); 
+    color: white; 
+}
+.btn:hover {
+    background-color: hsl(322, 100%, 80%); 
+}
+
+a {
+    color: inherit;
+}
+
+.hero {
+    background: var(--bg-hero) url(./images/bg-hero-mobile.svg); 
+    background-repeat: no-repeat; 
+    background-size: 100% 100%; 
+    text-align: center;
+}
+
+.hero > nav {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; 
+    background: var(--bg-hero); 
+}
+
+.hero >nav  > img {
+    width: 30%; 
+}
+
+.hero > button {
+    width: 75%; 
+    margin: 0 auto; 
+}
+.hero > nav > button:hover {
+    color: var(--light-text); 
+}
+
+.hero button {
+    margin-bottom: 20px; 
+}
+
+.card {
+    padding: 20px 10px; 
+    background: white; 
+    border-radius: 10px; 
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.1); 
+    display: grid; 
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    gap: 10px; 
+}
+
+.card > img {
+    height: 200px; 
+}
+
+.card > p {
+    color: var(--light-text)
+}
+
+
+.sign-up {
+    position: relative; 
+    height: 20vh; 
+}
+
+.sign-up>.card {
+    position: absolute;
+    bottom: -50%; 
+    left: 5%; 
+    width: 90%; 
+
+}
+
+footer {
+    z-index: 20; 
+    padding: 20px;
+    padding-top: 80px;  
+    background-color: var(--dark-text); 
+    color: white; 
+}
+footer>.logo{
+    background: white;
+    -webkit-mask:  url(./images/logo.svg);
+    mask:  url(./images/logo.svg);
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    height: 29px; 
+    width: 100px; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    fill: #FF52C1 !important; 
+}
+
+footer li {
+    list-style-type: none;
+}
+footer a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer li {
+    margin-bottom: 10px; 
+}
+
+footer ul {
+    margin-bottom: 25px; 
+}
+
+.contact li {
+    display: grid; 
+    grid-template-columns: 30px 1fr ;
+    margin-bottom: 10px; 
+}
+
+
+.socials {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.socials li {
+    margin-right: 10px; 
+}
+
+.socials i {
+    color: var(white); 
+    border: 1px solid white; 
+    border-radius: 50%; 
+    font-size: 25px; 
+    padding: 10px;
+
+}
+
+.socials .reverse {
+    background-color: white; 
+    color: var(--dark-text); 
+    font-size: 45px;
+    padding: 0; 
+
+}
+
+.socials a:hover i {
+    color: var(--btn-col); 
+    border-color: var(--btn-col); 
+
+}
+
+.socials a:hover .reverse {
+    background-color: var(--btn-col); 
+    color: var(--dark-text); 
+
+}
+
+footer p {
+    font-size: 0.6rem; 
+    text-align: center; 
+}
+
+
+@media screen and (min-width: 90em) {
+    .hero {
+        background: var(--bg-hero) url(./images/bg-hero-desktop.svg); 
+        background-repeat: no-repeat; 
+        background-size: 100% 100%; 
+        text-align: center;
+    }
+    .hero > nav> button {
+        padding: 5px 50px; 
+    }
+    .hero >nav  > img {
+        width: 20%; 
+    }
+
+    .container {
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        align-items: center;
+        gap: 50px; 
+    }
+
+    section {
+        padding: 0 10vw;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px; 
+        height: 100%; 
+        text-align: left; 
+        grid-column: 1 / 2; 
+        grid-row: 1; 
+    }
+
+    .left button {
+        width: 50%; 
+    }
+
+    .card {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card img {
+        height: 350px; 
+    }
+
+    .card .left {
+        margin-left: 50px; 
+    }
+
+
+    .sign-up .card {
+        grid-template-columns: 1fr;
+        min-height: 100px; 
+        width: 60%;
+        left: 20%; 
+    }
+    .sign-up .card button {
+        padding: 5px 50px; 
+    }
+
+    footer {
+        padding: 100px 10vw;
+    }
+
+    footer .logo {
+        -webkit-mask-size: auto 100%;
+        mask-size: auto 100%;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        height: 30px; 
+        width: 300px;
+        margin-bottom: 20px;  
+    }
+
+    footer .social-copy {
+        display: flex; 
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    footer ul {
+        margin-bottom: 0; 
+    }
+
+    footer .container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-items: flex-start;
+    }
+}
