@@ -1,0 +1,25 @@
+@use 'index' as *; 
+
+@mixin flexCenter($direction, $bg-col) {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+    background-color: $bg-col;
+}
+
+header {
+    @include flexCenter(column, green); 
+
+    // background: lightblue; 
+    font-size: 20px;
+    color: $text-col;
+    height: 50vh;
+    button {
+        background: $primary-btn;
+        &::after{
+            content: 'helloooo';
+
+        }
+    }
+}

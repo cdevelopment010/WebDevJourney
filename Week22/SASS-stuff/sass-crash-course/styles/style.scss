@@ -1,0 +1,6 @@
+@use 'header'; 
+
+.contact {
+    @extend header; 
+    background-color: blue; 
+}

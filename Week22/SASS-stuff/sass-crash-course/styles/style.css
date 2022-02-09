@@ -1,0 +1,22 @@
+header, .contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: green;
+  font-size: 20px;
+  color: #2b2b2b;
+  height: 50vh;
+}
+header button, .contact button {
+  background: #ab53ce;
+}
+header button::after, .contact button::after {
+  content: "helloooo";
+}
+
+.contact {
+  background-color: blue;
+}
+
+/*# sourceMappingURL=style.css.map */
