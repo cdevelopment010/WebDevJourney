@@ -1,0 +1,1 @@
+{"version":3,"sources":["scss/main.scss"],"names":[],"mappings":"AAEA,KACI","file":"main.713abc32.css","sourceRoot":"../src","sourcesContent":["$red: pink; \n\nbody {\n    background: $red;\n}"]}
