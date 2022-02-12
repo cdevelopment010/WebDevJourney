@@ -1,0 +1,133 @@
+* {
+  margin: 0; 
+  padding: 0; 
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.grid {
+  min-height: 100vh;
+  height: 100%; 
+  width: 100vw;
+  display: grid; 
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas: "nav body"; 
+}
+
+li {
+  list-style-type: none;
+}
+
+
+.body-container {
+  grid-area: body; 
+  padding: 25px; 
+}
+
+.body-container h1  {
+  text-align: center;
+  margin-bottom: 25px;  
+}
+.body-container p {
+  margin-bottom: 25px; 
+}
+
+
+.navigation {
+  grid-area: nav;
+  padding: 10px 0 10px 10px; 
+  background-color: lightblue;
+  
+}
+
+@media screen and (min-width: 48em) {
+  .navigation {
+    padding: 25px 0 25px 25px;     
+  }
+}
+
+
+.navigation .logo {
+  margin-bottom: 25px; 
+  font-size: 1.2rem;
+  font-weight: bold; 
+}
+
+.navigation a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navigation li {
+  padding: 10px 0 10px 10px;  
+  /* transition: 0.15s; */
+}
+
+.navigation li:hover
+,.navigation li.active {
+  background-color: white;
+  border-radius: 10px 0 0 10px;  
+  position: relative;
+  color: rgb(111, 153, 167);
+  font-weight: bold;
+}
+
+.navigation li:hover:before, .navigation li:hover:after, .navigation li.active:before, .navigation li.active:after {
+  content: ''; 
+  position: absolute; 
+  height: 10px; 
+  width: 10px; 
+  clip-path: polygon(1% 46%, 13% 46%, 27% 44%, 40% 42%, 53% 39%, 60% 35%, 73% 29%, 83% 23%, 96% 14%, 99% 8%, 100% 0%, 100% 99%, 0% 100%);
+  background-color: white; 
+}
+.navigation li:hover:before,
+.navigation li.active:before{
+  right: 0; 
+  top: -5px;
+}
+
+.navigation li:hover:after,.navigation li.active:after {
+  right:0; 
+  bottom: -5px;
+  background-color: white;
+  transform: scale(1,-1)
+}
+
+.card {
+  margin: 20px; 
+  padding: 20px; 
+  border-radius: 10px; 
+  border: 1px solid black; 
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.1);
+  min-height: 50px; 
+  display: grid; 
+  gap: 10px; 
+}
+
+.body-container > .body-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+}
+
+.timer {
+  width: max-content; 
+  margin: 0 auto; 
+  display: grid; 
+  gap: 10px; 
+}
+
+.timer label {
+  display: grid; 
+  grid-template-columns: 1fr 1fr;
+}
+
+#work-rest {
+  font-weight: bold; 
+  font-size: 2rem;
+}
+
+ #time-remaining, #loop  {
+  font-weight: bold; 
+  font-size: 1.8rem;
+}
