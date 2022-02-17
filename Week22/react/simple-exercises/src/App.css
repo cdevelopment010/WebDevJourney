@@ -15,6 +15,14 @@
   grid-template-areas: "nav body"; 
 }
 
+.grid-1-1 {
+  display: grid; 
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding-top: 25px; 
+  border-top: 1px solid black;
+}
+
 li {
   list-style-type: none;
 }
@@ -130,4 +138,21 @@ li {
  #time-remaining, #loop  {
   font-weight: bold; 
   font-size: 1.8rem;
+}
+
+.modal {
+  display: grid; 
+  gap: 20px; 
+  /* width: 50%;  */
+  padding: 40px 20px; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin: 0 auto; 
+}
+.modal label {
+  display: grid; 
+  grid-template-columns: 1fr 1fr;
+}
+.modal h3 {
+  text-align: center;
 }

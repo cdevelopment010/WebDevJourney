@@ -29,6 +29,10 @@ const Nav = () => {
                     <li className={splitLocation[1] === "stretches" ? 'active' : ""}>
                         <Link to='/stretches'>Stretches</Link>
                     </li>
+
+                    <li className={splitLocation[1] === "create-workout" ? 'active' : ""}>
+                        <Link to='/create-workout'>Create Workout</Link>
+                    </li>
                 </ul>
             </nav>
         </div>

@@ -13,7 +13,7 @@ function Body(props) {
     })
 
 
-    if (exercises.length > 0  ) {
+    if (exercises.length > 0 ) {
 
         return (
             <div className="body-container">
@@ -25,14 +25,16 @@ function Body(props) {
             </div>
         )
     }
+    if (props.title != 'Create Workout') {
+        return (
+            <div className="body-container">
+                <h1>Home</h1>
+                <p>Select an exercise from the nav to get started, or just use the timer below!</p>
+                <Timer />
+            </div>
+        )
+    }
 
-    return (
-        <div className="body-container">
-            <h1>Home</h1>
-            <p>Select an exercise from the nav to get started, or just use the timer below!</p>
-            <Timer />
-        </div>
-    )
 }
 
 export default Body;
