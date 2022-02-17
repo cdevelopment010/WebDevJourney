@@ -1,16 +1,15 @@
 import React from "react";
 import Card from "./card";
-import { useLocation } from "react-router-dom";
 import Timer from "./timer";
 
 function Body(props) {
     
     const exercises = [...props.exercises];    
-    console.log(exercises); 
-    exercises.map((x, index) => {
-        console.log(x.exercise);
-        console.log(index) 
-    })
+    // console.log(exercises); 
+    // exercises.map((x, index) => {
+    //     console.log(x.exercise);
+    //     console.log(index) 
+    // })
 
 
     if (exercises.length > 0 ) {
@@ -25,7 +24,7 @@ function Body(props) {
             </div>
         )
     }
-    if (props.title != 'Create Workout') {
+    if (props.title !== 'Create Workout') {
         return (
             <div className="body-container">
                 <h1>Home</h1>

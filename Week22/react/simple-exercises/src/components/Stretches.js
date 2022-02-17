@@ -60,7 +60,7 @@ const  Stretches = () => {
     return(
         <div className="grid">
             <Nav />
-            <Body exercises={stretchExercises} title="Abs" totalSets={totalSets}/>
+            <Body exercises={stretchExercises} title="Stretches" totalSets={totalSets}/>
         </div>
     )
 

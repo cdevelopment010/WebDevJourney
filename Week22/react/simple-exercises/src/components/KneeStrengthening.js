@@ -54,7 +54,7 @@ const  KneeStrengthening = () => {
     return(
         <div className="grid">
             <Nav />
-            <Body exercises={kneeExercises} title="Abs" totalSets={totalSets}/>
+            <Body exercises={kneeExercises} title="Knee Strengthening" totalSets={totalSets}/>
         </div>
     )
 

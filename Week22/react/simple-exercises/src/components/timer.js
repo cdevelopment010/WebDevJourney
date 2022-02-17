@@ -3,14 +3,27 @@ import React, { useEffect } from "react";
 
 const Timer = () => {
 
+
+    let audio = new Audio('mixkit-classic-short-alarm-993.wav')
+
     const zeroPad = (num) => {
          return String(num).length < 2 ? "0" + num : num; 
     }
 
     const updateTimer = (work,count,timeSec) => {
-        
+        audio.play(); 
         document.getElementById('loop').innerText = count;
         document.getElementById('work-rest').innerText = work == 1 ? 'Work' : 'Rest';
+
+        if (work === 1) {
+            document.body.classList.add('timer-work');
+            document.body.classList.remove('timer-rest');
+        } else {
+            document.body.classList.remove('timer-work');
+            document.body.classList.add('timer-rest');
+        }
+
+
         let time = new Date(); 
         let futureTime = new Date(time.getTime() + (1000 * timeSec) + 800); 
         
@@ -45,7 +58,14 @@ const Timer = () => {
                 document.getElementById('work-rest').innerText = 'Finished'
                 document.getElementById('loop').innerText = '0'; 
                 document.getElementById('time-remaining').innerText = '0'; 
-                
+                document.body.classList.remove('timer-work');
+                document.body.classList.remove('timer-rest');
+                audio.play(); 
+                setTimeout(() => {
+                    audio.pause(); 
+                    audio.currentTime=0;
+                     audio.play()
+                }, 500)
             }, 1000 * timeSec + 500)
         }
         

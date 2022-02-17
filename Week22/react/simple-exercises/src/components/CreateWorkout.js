@@ -10,7 +10,6 @@ const  CreateWorkout = () => {
 
     const handleInput = () => {
         console.log("button clicked"); 
-        const num = document.querySelector('.body-grid').children.length;
         const title = document.querySelector('#title').value;
         const sets = document.querySelector('#sets').value;
         const reps = document.querySelector('#reps').value;

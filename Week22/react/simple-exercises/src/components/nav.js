@@ -10,7 +10,7 @@ const Nav = () => {
     return(
         <div className="navigation">
             <div className="logo" >
-                ProjectName
+                Simple Exercises
             </div>
             <nav className="item">
                 <ul className="ul">
