@@ -1,0 +1,134 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+main {
+    z-index: 0;
+    width: 80%; 
+    margin: 0 auto; 
+}
+h1 {
+    text-align: center;
+    margin: 25px; 
+}
+label {
+    display: block; 
+    margin: 10px auto; 
+    text-align: center;
+}
+
+table {
+    width: 100%; 
+    border-collapse: collapse;
+    border: 1px solid black;
+
+}
+
+thead, tbody, th, td {
+    border: 1px solid black;
+}
+
+.calendar {
+    display: grid; 
+    grid-template-columns: repeat(7, 1fr);
+    border: 2px solid black;
+    width: 80%; 
+    margin: 30px auto; 
+}
+.calendar > * {
+    border-width: 0 1px 1px 0;
+    border-style: dashed;
+    border-color: black;
+    border-collapse: collapse;
+    text-align: center;
+}
+.calendar > :nth-child(7n){
+    border-width: 0 0 1px 0;
+}
+.calendar > :nth-last-child(-n+7){
+    border-width: 0 1px 0 0;
+}
+
+
+.blank-day {
+    background-color: #838080;
+}
+
+.day-header {
+    text-align: center;
+    font-size: 1.2rem; 
+    background-color: lightcoral;
+    font-weight: bold; 
+}
+
+.today {
+    background-color: rgba(255, 255, 0,0); 
+    font-weight: bold; 
+    animation: pulse 1s linear 0s 5 forwards ;
+}
+
+
+.modal {
+    width: 80%;
+    padding: 25px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5); 
+    display: grid; 
+    justify-content: center;
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    background-color: white;
+}
+.modal h3 {
+    text-align: center;
+}
+.modal form {
+    display: grid; 
+}
+
+.modal button {
+    width: 50%;
+    margin: 0 auto; 
+}
+
+.modal div {
+    position: absolute; 
+    right: 5px; 
+    top: 0px; 
+    font-size: 2rem;
+}
+
+.overlay {
+    background-color: rgba(0,0,0,0.25);
+    height: 100vh; 
+    width: 100vw; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0; 
+    backdrop-filter: blur(1px); 
+    -webkit-backdrop-filter: blur(1px);
+    z-index: 10; 
+}
+
+
+.hidden {
+    display: none; 
+}
+
+
+@keyframes pulse {
+    0% {
+        background-color: rgba(255, 255, 0,0); 
+    }
+    100% {
+        background-color: rgba(255,255,0, 1);
+    }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sites | Calendar</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <main>
+        <h1>
+            Calendar
+        </h1>
+    
+        <label for="year">
+            Year
+            <input type="button" value="<" class="decrease">
+            <input type="number" name="" id="year">
+            <input type="button" value=">" class="increase">
+        </label>
+        <label for="month">
+            Month
+            <input type="button" value="<" class="decrease">
+            <select name="month" id="month">
+                <option value="Jan">Jan</option>
+                <option value="Feb">Feb</option>
+                <option value="Mar">Mar</option>
+                <option value="Apr">Apr</option>
+                <option value="May">May</option>
+                <option value="Jun">Jun</option>
+                <option value="Jul">Jul</option>
+                <option value="Aug">Aug</option>
+                <option value="Sep">Sep</option>
+                <option value="Oct">Oct</option>
+                <option value="Nov">Nov</option>
+                <option value="Dec">Dec</option>
+            </select>
+            <input type="button" value=">" class="increase">
+        </label>
+    
+        <div class="calendar">
+    
+        </div>
+
+
+        <div>
+            <h3>Tasks:</h3> 
+            <input type="button" value="clear list" id="clear-tasks">
+            <table id="task-table">
+                <thead>
+                    <th>Date</th>
+                    <th>task</th>
+                    <th>desc</th>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+
+    <div class="modal hidden">
+        <h3>Add item</h3>
+        <p></p>
+        <form action="#">
+            <label for="item-title">
+                title: 
+                <input type="text" id="item-title">
+            </label>
+            <label for="">
+                desc:
+                <input type="text" name="item-desc" id="item-desc">
+            </label>
+            <button id="add" type="button">Add</button>
+        </form>
+        <div id="close">&times;</div>
+    </div>
+
+    <div class="overlay hidden"></div>
+
+    <script src="./index.js"></script>
+    
+</body>
+</html>
