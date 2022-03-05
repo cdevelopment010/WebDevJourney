@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sites | Whiteboard</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <main>
+        <div id="drawing-area">
+            <canvas id="my-canvas"></canvas>
+        </div>
+
+        </canvas>
+        
+        <aside>
+            <div class="container">
+                <button type="button" id="clear-btn">Clear</button>
+                <input type="number" min="1" max="10" id="line-thickness" value="3">
+                <input type="color" id="favcolor" name="favcolor" value="#000000">
+                <label for="dash">
+                    line style:
+                    <select id="dash">
+                        <option value="dash">dash</option>
+                        <option value="line">line</option>
+                    </select>
+                </label>
+            </div>
+        </aside>
+    </main>
+
+    <script src="./index.js"></script>
+</body>
+</html>
