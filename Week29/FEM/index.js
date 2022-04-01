@@ -1,0 +1,37 @@
+const slider = document.getElementById('myRange'); 
+const priceInput = document.getElementById('price-input'); 
+const pageViews = document.querySelector('.pageviews');
+const pricesViews = {
+    0: {
+        views: '10K', 
+        price: '$8'
+    },
+    1: {
+        views: '50K', 
+        price: '$12'
+    },
+    2: {
+        views: '100K', 
+        price: '$16'
+    },
+    3: {
+        views: '500K', 
+        price: '$24'
+    },
+    4: {
+        views: '1M', 
+        price: '$36'
+    },
+}
+
+updateSlider.bind(slider)(); 
+slider.addEventListener('input', updateSlider)
+
+
+function updateSlider() {
+    slider.style.setProperty('--left', this.value/4 * 100); 
+    priceInput.innerText = pricesViews[this.value].price;
+    pageViews.innerText = pricesViews[this.value].views + ' pageviews';
+
+}
+
