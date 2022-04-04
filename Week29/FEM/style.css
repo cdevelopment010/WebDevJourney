@@ -50,7 +50,7 @@ body {
 header, main {
     width: 80%; 
     margin: 0 auto; 
-    min-height: 30vh;
+    /* min-height: 30vh; */
 
 }
 
@@ -68,7 +68,7 @@ header {
 header::before {
     content: ''; 
     position: absolute; 
-    height: 100%; 
+    height: 200%; 
     width: 100%; 
     z-index: -2;
     background-image: url('./images/pattern-circles.svg');
@@ -119,11 +119,11 @@ li {
 }
 
 .line {
-    width: 80vw; 
+    width: calc(100% + 40px); 
     height: 2px; 
     background-color: var(--empty-slider);
     margin: 10px 0 10px -20px;
-    margin-left: -20px; 
+    margin-left: 0px; 
     
 }
 
@@ -135,6 +135,7 @@ button {
     width: 80%; 
     outline: none; 
     border: 1px solid transparent;
+    cursor: pointer;
 }
 
 button:hover, button:active {
@@ -219,7 +220,11 @@ input[type='range'] {
     background: url('./images/icon-slider.svg') center no-repeat, var(--slider-bg);
 }
 
-
+.slider::-moz-range-progress {
+    height: 15px; 
+    border-radius: 10px; 
+    background: var(--slider-bg);
+}
 
 .slider::-webkit-slider-runnable-track {
     height: 15px; 
@@ -233,7 +238,7 @@ input[type='range'] {
     gap: 10px;
     justify-content: center;
     align-items: center;
-    font-size: 0.8em;
+    font-size: 0.7em;
     font-weight: 600; 
     color: var(--text-col);
 }
@@ -303,16 +308,10 @@ ul {
     gap: 10px; 
 }
 
-
-
-
-/* remove br tag for larger screens */
-
-@media screen and (min-width: 1440px) {
-    .sm-screen {
-        display: none; 
-    }
+.lg-screen {
+    display: none; 
 }
+
 
 @media screen and (max-height: 500px) {
     body {
@@ -321,5 +320,47 @@ ul {
 
     .card {
         min-height: 400px; 
+    }
+}
+
+
+
+
+@media screen and (min-width: 1440px) {
+    html {
+        font-size: 18px;
+    }
+    /* remove br tag for larger screens */
+    .sm-screen {
+        display: none; 
+    }
+
+    .card {
+        grid-template-columns: 1fr 1fr;
+        width: 40vw;
+        margin: 0 auto; 
+    }
+    .pageviews {
+        font-size: 1em;
+    }
+    .price {
+        font-size: 2em;
+    }
+
+    .line, .slidecontainer, .discount-area {
+        grid-column: 1 /3;
+    }
+    button {
+        height: 50px;
+        width: 60%; 
+        font-size: 1.2em;
+    }
+    .discount-area {
+        position: relative;
+        left: 10%; 
+        transform: translateX(-10%);
+    }
+    .lg-screen {
+        display: inline; 
     }
 }
