@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,500&display=swap');
+
+
+* {
+    margin: 0; 
+    padding: 0; 
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 5vw;
+}
+
+#challenge-area {
+    height: 40vh;
+    width: 60vw;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    background-color: #F6F1C4;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+    font-size: 2em;
+    text-align: center;
+}
+
+button {
+    background-color: #C4C6F6;
+    outline:none; 
+    border: 2px solid transparent; 
+    padding: 8px 20px; 
+    border-radius: 3px;
+    color: white; 
+}
+
+p {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+
+.streak {
+    display: flex; 
+    gap: 10px; 
+}
+
+.day {
+    height: 25px; 
+    width: 25px; 
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.complete {
+    border-color: #C4F6E4;
+    background-color: #C4F6E4;
+}
+
+.today {
+    border: 3px solid #F6CDC4;
+}
+
+
+@media screen and (min-width: 64em) {
+    body {
+        padding: 0 10vw;
+    }
+    #challenge-area {
+        font-size: 4em; 
+    }
+    .day {
+        height: 50px; 
+        width: 50px; 
+    }
+}   

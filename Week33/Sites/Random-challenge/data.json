@@ -1,0 +1,34 @@
+[
+    {
+        "name": "10 push ups",
+        "type": "Exercise"
+    },
+    {
+        "name": "Read 10 pages of a non-fiction book",
+        "type": "Knowledge"
+    },
+    {
+        "name": "Meditate for 5 minutes",
+        "type": "Mind"
+    },
+    {
+        "name": "Earn £5 (not from your main job!)",
+        "type": "Finance"
+    },
+    {
+        "name": "Write 1 page of a book",
+        "type": "Knowledge"
+    },
+    {
+        "name": "Brainstorm 5 side income ideas",
+        "type": "Finance"
+    },
+    {
+        "name": "Talk to a stranger",
+        "type": "Social"
+    },
+    {
+        "name": "No screens for 1 hour",
+        "type": "Mind"
+    }
+]
